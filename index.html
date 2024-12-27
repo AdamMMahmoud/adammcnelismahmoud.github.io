@@ -9,12 +9,54 @@
     <link rel="stylesheet" href="styles.css">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
     <style>
+        body {
+            display: flex;
+            font-family: 'Poppins', sans-serif;
+            margin: 0;
+        }
+
+        .left-section, .right-section {
+            padding: 2rem;
+            height: 100vh;
+            overflow-y: auto;
+        }
+
+        .left-section {
+            width: 40%;
+            background: #f4f4f4;
+            border-right: 2px solid #4CAF50;
+        }
+
+        .right-section {
+            width: 60%;
+        }
+
+        .profile-image {
+            max-width: 100%;
+            border-radius: 50%;
+            margin-bottom: 1rem;
+        }
+
+        .bio {
+            margin-bottom: 2rem;
+        }
+
+        .skills, .courses {
+            margin-bottom: 2rem;
+        }
+
+        .skills ul, .courses ul {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        .skills li, .courses li {
+            margin-bottom: 0.5rem;
+        }
+
         /* Timeline Styling */
         .timeline {
-            padding: 2rem 1rem;
-            position: relative;
-            max-width: 800px;
-            margin: auto;
+            padding: 1rem;
         }
 
         .timeline-wrapper {
@@ -79,104 +121,103 @@
     </style>
 </head>
 <body>
-    <header class="header">
-        <nav class="navbar">
-            <a href="#home" class="nav-logo">Adam Mahmoud</a>
-            <ul class="nav-menu">
-                <li><a href="#about" class="nav-link">About</a></li>
-                <li><a href="#timeline" class="nav-link">Timeline</a></li>
-                <li><a href="#contact" class="nav-link">Contact</a></li>
-            </ul>
-        </nav>
-    </header>
-
-    <section id="timeline" class="timeline">
-        <h2>My Journey</h2>
-        <div class="timeline-wrapper">
-            <div class="timeline-item ongoing">
-                <div class="timeline-dot"></div>
-                <div class="timeline-content">
-                    <h3>Student Data Analyst</h3>
-                    <p><strong>September 2023 – Present</strong></p>
-                    <p>Query, clean, and visualize university data using Python, Tableau, and SQL. Develop the EM website and collaborate with department heads to inform strategic enrollment decisions.</p>
-                </div>
-            </div>
-
-            <div class="timeline-item">
-                <div class="timeline-dot"></div>
-                <div class="timeline-content">
-                    <h3>Community Assistant</h3>
-                    <p><strong>January 2024 – April 2024</strong></p>
-                    <p>Managed housing operations, annual fairs, and social media outreach. Coordinated events that resulted in 20 new leases.</p>
-                </div>
-            </div>
-
-            <div class="timeline-item ongoing">
-                <div class="timeline-dot"></div>
-                <div class="timeline-content">
-                    <h3>Student Advisory Board Member</h3>
-                    <p><strong>October 2024 – Present</strong></p>
-                    <p>Advise the College of CDSS on student priorities and diversity initiatives through pulse surveys and discussions.</p>
-                </div>
-            </div>
-
-            <div class="timeline-item ongoing">
-                <div class="timeline-dot"></div>
-                <div class="timeline-content">
-                    <h3>MPS Scholars Program Mentor</h3>
-                    <p><strong>August 2024 – Present</strong></p>
-                    <p>Mentor math students, providing tailored advice and fostering community in the MPS department.</p>
-                </div>
-            </div>
-
-            <div class="timeline-item">
-                <div class="timeline-dot"></div>
-                <div class="timeline-content">
-                    <h3>Bunny Trails Game</h3>
-                    <p><strong>July 2024</strong></p>
-                    <p>Developed a 2D Java-based game with multiplayer modes, interactive mechanics, and graphical enhancements.</p>
-                </div>
-            </div>
-
-            <div class="timeline-item">
-                <div class="timeline-dot"></div>
-                <div class="timeline-content">
-                    <h3>Exploring 2022 Indian NGO Distribution</h3>
-                    <p><strong>January 2024 – May 2024</strong></p>
-                    <p>Analyzed the geographic distribution of NGOs in India, culminating in a symposium presentation.</p>
-                </div>
-            </div>
-
-            <div class="timeline-item">
-                <div class="timeline-dot"></div>
-                <div class="timeline-content">
-                    <h3>Modeling π and e through Approximation and Application</h3>
-                    <p><strong>April 2023 – May 2023</strong></p>
-                    <p>Used numerical methods in Python to approximate π and e and applied results to a physics simulation.</p>
-                </div>
-            </div>
+    <div class="left-section">
+        <img src="placeholder.jpg" alt="Adam Mahmoud" class="profile-image">
+        <div class="bio">
+            <h2>About Me</h2>
+            <p>Hello! I'm Adam Mahmoud, a student passionate about data science and applied mathematics. I enjoy tackling real-world problems using data and math, and I'm always excited to learn and grow.</p>
         </div>
-    </section>
 
-    <section id="contact" class="contact">
-        <h2>Contact Me</h2>
-        <p>Feel free to reach out to me on <a href="mailto:adam.mcmoud@berkeley.edu">email</a> or connect with me on <a href="https://www.linkedin.com/in/adam-mcnelis-mahmoud">LinkedIn</a>.</p>
-    </section>
+        <div class="skills">
+            <h2>Skills</h2>
+            <ul>
+                <li>Python, Java, SQL, RegEx, LaTeX</li>
+                <li>Libraries: Numpy, Pandas, Matplotlib, Seaborn, Scikit-learn</li>
+                <li>Data Analysis Tools: Tableau, Excel, Google Sheets, Atlas.Ti</li>
+                <li>Languages: Spanish (California State Seal of Biliteracy)</li>
+            </ul>
+        </div>
 
-    <footer class="footer">
-        <p>&copy; 2024 Adam Mahmoud. All rights reserved.</p>
-    </footer>
+        <div class="courses">
+            <h2>Courses</h2>
+            <ul>
+                <li>Data C8 (Foundations of Data Science)</li>
+                <li>Data C100 (Principles & Techniques of Data Science)</li>
+                <li>Math 113 (Introduction to Abstract Algebra)</li>
+                <li>Math 110 (Abstract Linear Algebra)</li>
+                <li>Math 104 (Introduction to Analysis)</li>
+            </ul>
+        </div>
+    </div>
 
-    <script>
-        // Adjust ongoing item's height dynamically
-        document.querySelectorAll('.timeline-item.ongoing').forEach(item => {
-            const endY = window.innerHeight + window.scrollY;
-            const offsetY = item.getBoundingClientRect().top + window.scrollY;
-            const height = endY - offsetY;
-            if (height > 0) {
-                item.style.height = height + 'px';
-            }
-        });
-    </script>
+    <div class="right-section">
+        <section id="timeline" class="timeline">
+            <h2>My Journey</h2>
+            <div class="timeline-wrapper">
+                <div class="timeline-item ongoing">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content">
+                        <h3>Student Data Analyst</h3>
+                        <p><strong>September 2023 – Present</strong></p>
+                        <p>Query, clean, and visualize university data using Python, Tableau, and SQL. Develop the EM website and collaborate with department heads to inform strategic enrollment decisions.</p>
+                    </div>
+                </div>
+
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content">
+                        <h3>Community Assistant</h3>
+                        <p><strong>January 2024 – April 2024</strong></p>
+                        <p>Managed housing operations, annual fairs, and social media outreach. Coordinated events that resulted in 20 new leases.</p>
+                    </div>
+                </div>
+
+                <div class="timeline-item ongoing">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content">
+                        <h3>Student Advisory Board Member</h3>
+                        <p><strong>October 2024 – Present</strong></p>
+                        <p>Advise the College of CDSS on student priorities and diversity initiatives through pulse surveys and discussions.</p>
+                    </div>
+                </div>
+
+                <div class="timeline-item ongoing">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content">
+                        <h3>MPS Scholars Program Mentor</h3>
+                        <p><strong>August 2024 – Present</strong></p>
+                        <p>Mentor math students, providing tailored advice and fostering community in the MPS department.</p>
+                    </div>
+                </div>
+
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content">
+                        <h3>Bunny Trails Game</h3>
+                        <p><strong>July 2024</strong></p>
+                        <p>Developed a 2D Java-based game with multiplayer modes, interactive mechanics, and graphical enhancements.</p>
+                    </div>
+                </div>
+
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content">
+                        <h3>Exploring 2022 Indian NGO Distribution</h3>
+                        <p><strong>January 2024 – May 2024</strong></p>
+                        <p>Analyzed the geographic distribution of NGOs in India, culminating in a symposium presentation.</p>
+                    </div>
+                </div>
+
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content">
+                        <h3>Modeling π and e through Approximation and Application</h3>
+                        <p><strong>April 2023 – May 2023</strong></p>
+                        <p>Used numerical methods in Python to approximate π and e and applied results to a physics simulation.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
 </body>
 </html>
