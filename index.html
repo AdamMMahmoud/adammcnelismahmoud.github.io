@@ -15,6 +15,7 @@
             <a href="#home" class="nav-logo">Adam Mahmoud</a>
             <ul class="nav-menu">
                 <li><a href="#about" class="nav-link">About</a></li>
+                <li><a href="#resume" class="nav-link">Resume</a></li>
                 <li><a href="#projects" class="nav-link">Projects</a></li>
                 <li><a href="#contact" class="nav-link">Contact</a></li>
             </ul>
@@ -23,23 +24,84 @@
 
     <section id="home" class="hero">
         <h1>Welcome to My Website</h1>
-        <p>Explore my portfolio, projects, and more!</p>
+        <p>I am passionate about and currently pursuing <span id="dynamic-text"></span></p>
+        <script>
+            const dynamicText = document.getElementById('dynamic-text');
+            const words = ["software engineering", "data science", "applied mathematics", "machine learning"];
+            let i = 0, j = 0, isDeleting = false;
+
+            function typeEffect() {
+                if (isDeleting) {
+                    dynamicText.textContent = words[i].slice(0, j--);
+                    if (j < 0) {
+                        isDeleting = false;
+                        i = (i + 1) % words.length;
+                    }
+                } else {
+                    dynamicText.textContent = words[i].slice(0, ++j);
+                    if (j === words[i].length) {
+                        isDeleting = true;
+                        setTimeout(typeEffect, 1000); // Pause at full word
+                        return;
+                    }
+                }
+                setTimeout(typeEffect, isDeleting ? 100 : 150);
+            }
+            typeEffect();
+        </script>
     </section>
 
     <section id="about" class="about">
         <h2>About Me</h2>
-        <p>Hello! I'm Adam Mahmoud, a student passionate about data science and applied mathematics. Welcome to my personal website!</p>
+        <img src="placeholder.jpg" alt="Adam Mahmoud" class="profile-pic">
+        <p>Hello! I'm Adam Mahmoud, a student passionate about data science and applied mathematics. I enjoy tackling real-world problems using data and math, and I'm always excited to learn and grow.</p>
+    </section>
+
+    <section id="resume" class="resume">
+        <h2>Resume</h2>
+        <div class="resume-section">
+            <h3>Experience</h3>
+            <ul>
+                <li><strong>Student Data Analyst:</strong> UC Berkeley Enrollment Management Department</li>
+                <li><strong>Math Tutor:</strong> High School Algebra to Calculus</li>
+                <li><strong>Intern:</strong> C.W. Dillard Elementary School</li>
+            </ul>
+        </div>
+        <div class="resume-section">
+            <h3>Extracurriculars</h3>
+            <ul>
+                <li>MPS Scholars Mentoring Network</li>
+                <li>Mathletes Club President</li>
+                <li>Community Assistant at Spectra Southside</li>
+            </ul>
+        </div>
+        <div class="resume-section">
+            <h3>Skills</h3>
+            <p>Python, Java, SQL, HTML/CSS, Data Visualization, Tableau, Pandas</p>
+        </div>
+        <div class="resume-section">
+            <h3>Courses</h3>
+            <p>Data C8, Data C100, Math 113, Math 110, Math 104</p>
+        </div>
+        <div class="resume-section">
+            <h3>Projects</h3>
+            <p>2D Java Game, NGO Data Visualization, Housing Price Analysis</p>
+        </div>
     </section>
 
     <section id="projects" class="projects">
         <h2>My Projects</h2>
         <div class="project-card">
-            <h3>Project Title</h3>
-            <p>Brief description of the project. Add more details here.</p>
+            <h3>2D Java Game</h3>
+            <p>A randomly generated world where players compete as bunnies.</p>
         </div>
         <div class="project-card">
-            <h3>Another Project</h3>
-            <p>Brief description of the project. Add more details here.</p>
+            <h3>NGO Data Visualization</h3>
+            <p>Explored 2022 Indian NGO distribution using Tableau and Python.</p>
+        </div>
+        <div class="project-card">
+            <h3>Housing Price Analysis</h3>
+            <p>Built a model to analyze housing prices and assess income disparities.</p>
         </div>
     </section>
 
