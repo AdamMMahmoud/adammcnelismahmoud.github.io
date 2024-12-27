@@ -88,3 +88,71 @@ header {
         gap: 0.5rem;
     }
 }
+
+/* Timeline Styling */
+.timeline {
+    padding: 2rem 1rem;
+    position: relative;
+    max-width: 800px;
+    margin: auto;
+}
+
+.timeline-wrapper {
+    position: relative;
+    border-left: 2px solid #4CAF50;
+    margin-left: 2rem;
+    padding: 1rem 0;
+}
+
+.timeline-item {
+    position: relative;
+    margin-bottom: 2rem;
+}
+
+.timeline-dot {
+    position: absolute;
+    left: -12px;
+    top: 0;
+    width: 20px;
+    height: 20px;
+    background-color: #4CAF50;
+    border: 3px solid #fff;
+    border-radius: 50%;
+}
+
+.timeline-content {
+    padding-left: 2rem;
+}
+
+.timeline-content h3 {
+    margin: 0 0 0.5rem;
+    font-size: 1.25rem;
+    font-weight: bold;
+}
+
+.ongoing .timeline-dot {
+    animation: pulse 1.5s infinite;
+}
+
+.ongoing::after {
+    content: '';
+    position: absolute;
+    left: -1rem;
+    top: 20px;
+    height: calc(100% - 20px);
+    width: 2px;
+    background: repeating-linear-gradient(180deg, #4CAF50, #4CAF50 10px, transparent 10px, transparent 20px);
+}
+
+@keyframes pulse {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.2); }
+    100% { transform: scale(1); }
+}
+
+/* Stacking Items */
+.timeline-wrapper {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 1rem;
+}
