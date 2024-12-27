@@ -3,99 +3,53 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Adam McNelis Mahmoud</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 0;
-            background-color: #f4f4f4;
-        }
-        header {
-            background-color: #333;
-            color: white;
-            padding: 1rem 0;
-            text-align: center;
-        }
-        nav {
-            display: flex;
-            justify-content: center;
-            gap: 1rem;
-            padding: 0.5rem;
-            background-color: #444;
-        }
-        nav a {
-            color: white;
-            text-decoration: none;
-            padding: 0.5rem 1rem;
-        }
-        nav a:hover {
-            background-color: #555;
-        }
-        section {
-            padding: 2rem;
-            margin: 1rem auto;
-            max-width: 900px;
-            background: white;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-            border-radius: 5px;
-        }
-        footer {
-            text-align: center;
-            padding: 1rem;
-            background-color: #333;
-            color: white;
-        }
-        img.profile {
-            max-width: 150px;
-            border-radius: 50%;
-            margin: 0 auto;
-            display: block;
-        }
-    </style>
+    <meta name="description" content="Adam Mahmoud's Personal Website">
+    <meta name="author" content="Adam Mahmoud">
+    <title>Adam Mahmoud</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
 </head>
 <body>
-    <header>
-        <h1>Adam McNelis Mahmoud</h1>
+    <header class="header">
+        <nav class="navbar">
+            <a href="#home" class="nav-logo">Adam Mahmoud</a>
+            <ul class="nav-menu">
+                <li><a href="#about" class="nav-link">About</a></li>
+                <li><a href="#projects" class="nav-link">Projects</a></li>
+                <li><a href="#contact" class="nav-link">Contact</a></li>
+            </ul>
+        </nav>
     </header>
 
-    <nav>
-        <a href="#about">About</a>
-        <a href="#projects">Projects</a>
-        <a href="#experience">Experience</a>
-        <a href="#contact">Contact</a>
-    </nav>
+    <section id="home" class="hero">
+        <h1>Welcome to My Website</h1>
+        <p>Explore my portfolio, projects, and more!</p>
+    </section>
 
-    <section id="about">
+    <section id="about" class="about">
         <h2>About Me</h2>
-        <img class="profile" src="profile.jpg" alt="Adam Mahmoud">
-        <p>Hello! My name is Adam Mahmoud, and I am a junior at UC Berkeley, double majoring in Data Science and Applied Mathematics. Welcome to my personal website where I showcase my projects, experiences, and skills!</p>
+        <p>Hello! I'm Adam Mahmoud, a student passionate about data science and applied mathematics. Welcome to my personal website!</p>
     </section>
 
-    <section id="projects">
-        <h2>Projects</h2>
-        <ul>
-            <li><strong>BunnyTrails:</strong> A 2D game built in Java, featuring random world generation and interactive gameplay.</li>
-            <li><strong>Spam Detection Model:</strong> A machine learning project analyzing email datasets to classify spam vs. ham.</li>
-            <li><strong>NGO Distribution Analysis:</strong> Research on the geographic distribution of Indian NGOs, presented at a Data Science symposium.</li>
-        </ul>
+    <section id="projects" class="projects">
+        <h2>My Projects</h2>
+        <div class="project-card">
+            <h3>Project Title</h3>
+            <p>Brief description of the project. Add more details here.</p>
+        </div>
+        <div class="project-card">
+            <h3>Another Project</h3>
+            <p>Brief description of the project. Add more details here.</p>
+        </div>
     </section>
 
-    <section id="experience">
-        <h2>Experience</h2>
-        <ul>
-            <li><strong>Student Data Analyst, UC Berkeley:</strong> Analyzing academic and demographic data, developing the Enrollment Management website, and creating visualizations.</li>
-            <li><strong>Physics Lab Research:</strong> Collaborated on modeling π and e through numerical methods and applied results to physics simulations.</li>
-        </ul>
+    <section id="contact" class="contact">
+        <h2>Contact Me</h2>
+        <p>Feel free to reach out to me on <a href="mailto:adam.mcmoud@berkeley.edu">email</a> or connect with me on <a href="https://www.linkedin.com/in/adam-mcnelis-mahmoud">LinkedIn</a>.</p>
     </section>
 
-    <section id="contact">
-        <h2>Contact</h2>
-        <p>If you'd like to get in touch, feel free to email me at <a href="mailto:adam.mcmoud@berkeley.edu">adam.mcmoud@berkeley.edu</a> or connect with me on <a href="https://www.linkedin.com/in/adam-mcnelis-mahmoud">LinkedIn</a>.</p>
-    </section>
-
-    <footer>
-        <p>&copy; 2024 Adam Mahmoud. All Rights Reserved.</p>
+    <footer class="footer">
+        <p>&copy; 2024 Adam Mahmoud. All rights reserved.</p>
     </footer>
 </body>
 </html>
