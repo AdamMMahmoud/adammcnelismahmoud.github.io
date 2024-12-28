@@ -20,7 +20,7 @@
         header {
             background-color: var(--header-bg-color);
             color: var(--primary-color);
-            padding: 10px 30px;
+            padding: 10px 60px;
             display: flex;
             justify-content: space-between;
             align-items: center;
@@ -393,7 +393,7 @@
             var section = document.getElementById(sectionId);
             if (section) {
                 var headerHeight = document.querySelector('header').offsetHeight;
-                var subheaderOffset = 80;
+                var subheaderOffset = 10;
                 var targetOffset = section.offsetTop - headerHeight - subheaderOffset;
                 window.scrollTo({
                     top: targetOffset,
