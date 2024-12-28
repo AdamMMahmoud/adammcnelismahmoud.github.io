@@ -213,17 +213,64 @@
             
             <section id="projects">
                 <h2 style="margin-top: -80px";>Projects</h2>
-                <p><span style="color: var(--primary-color); font-weight: bold;">SIXT33N:</span> Utilized ML techniques (PCA, SVD) and C++ to build a voice-controlled model car with a microcontroller (Arduino), analog circuits, and PCBs; engineered op-amp and BJT circuits for closed-loop control logic, along with audio signal amplification and filtering circuits to support four voice commands.<br></p>
-                <p><span style="color: var(--primary-color); font-weight: bold;">ANN Network:</span> Wrote the RISC-V assembly code needed to run a simple artificial neural network (ANN) on the Venus RISC-V simulator, including the implementation of basic operations such as vector dot products, matrix-matrix multiplications, argmax, and activation functions, which I combined to load and execute a pre-trained network to classify handwritten digits from the MNIST benchmark set.<br></p>
-                <p><span style="color: var(--primary-color); font-weight: bold;">CPU:</span> Built a fully functional, 32-bit CPU with a pipelined RISC-V datapath in Logisim capable of running machine code converted from RISC-V assembly code.<br></p>
-                <p><span style="color: var(--primary-color); font-weight: bold;">NGram:</span> Replicated Google’s Ngram Viewer in Java using HashMaps, Collections, Iterators, and the Princeton Algorithms Library for reading, parsing, and converting files to track history of word usage.<br></p>
-                <p><span style="color: var(--primary-color); font-weight: bold;">WordNet:</span> Built a visual and numerical model of hyponym and hypernym correlations and tracked word tree lineage in Java, using Directed Acyclic Graphs, HashSets, and ArrayLists, as well as algorithms including depth-first search graph traversal and weighted quick union.<br></p>
-                <p><span style="color: var(--primary-color); font-weight: bold;">2D World Generation:</span> Designed and implemented the game functionality, UI, and data storage of a 2D tile-based, user-interactive world exploration engine in Java that uses pseudo-random algorithms to generate custom worlds and gameplay.<br></p>
-                <p><span style="color: var(--primary-color); font-weight: bold;">Scheme:</span> Implemented the core features for a lisp interpreter in Python using a recursive descent parser, utilizing lexical and syntactic analysis as well as input parsing.<br></p>
-                <p><span style="color: var(--primary-color); font-weight: bold;">Arcade Games:</span> Built fully rendered replications of the classic puzzle games 2048 and Tetris in Java that incorporate user data storage for scores, responsive user controls through keyboard inputs (WASD, UDLR), and various Java data structures and algorithms for game logic.<br></p>
-                <p><span style="color: var(--primary-color); font-weight: bold;">Website:</span> Built using HTML and CSS, hosted on GitHub Pages. View the code <a href="https://github.com/jackgaletti/jackgalettiwebsite/tree/main" style="color: var(--primary-color); text-decoration: underline;" target="_blank">here</a>.</p>
+                <h4 style="display: inline;"><span style="color: var(--primary-color); font-weight: bold;">Spam Email Classification</span></h4>
+                <span style="display: inline;"> &bull; Python, Scikit-learn, Pandas, Regex, Matplotlib <i>(November 2024)</i></span>
+                <p style="margin-top: 5px;">
+                  Built a logistic regression model to classify more than 8,000 emails as spam or not spam, 
+                  achieving 85% test set accuracy through feature engineering and model tuning. Leveraged RegEx to parse 
+                  email text, engineering features like custom word presence indicators and punctuation frequency. 
+                  Evaluated performance with precision, recall, and ROC curves, iteratively refining the feature set 
+                  and optimizing hyperparameters to minimize false positives and enhance overall reliability.
+                </p>
+                <h4 style="display: inline;"><span style="color: var(--primary-color); font-weight: bold;">Cook County Housing Price Prediction</span></h4>
+                <span style="display: inline;"> &bull; Python, Scikit-learn, Pandas, Matplotlib, Seaborn <i>(October 2024)</i></span>
+                <p style="margin-top: 5px;">
+                  Developed a predictive model for housing prices using linear regression and a custom data pipeline 
+                  on 500,000+ records. Performed extensive feature engineering—including outlier removal, log 
+                  transformations, and one-hot encoding—while analyzing potential biases to ensure fair and accurate 
+                  results. Validated the model’s performance on real-world data, demonstrating the effectiveness of 
+                  exploratory analysis and iterative refinement in delivering actionable insights.
+                </p>
+                <h4 style="display: inline;"><span style="color: var(--primary-color); font-weight: bold;">Bunny Trails Game</span></h4>
+                <span style="display: inline;"> &bull; Java, IntelliJ, StdDraw <i>(July 2024)</i></span>
+                <p style="margin-top: 5px;">
+                  Built a 2D Java game (2,500+ lines of code) featuring randomly generated worlds driven by user-provided seed numbers.
+                  Implemented multiplayer modes and interactive mechanics, incorporating mouse and keyboard inputs for character
+                  control. Integrated PNG/GIF for graphics, OTF for fonts, and WAV for music, and stored player progress locally
+                  via a text file to maintain persistent gameplay.
+                  <br>
+                  Downloads for Mac and select Windows versions are available 
+                  <a href="https://linktr.ee/bunnytrails" target="_blank" style="color: var(--primary-color); text-decoration: underline;">
+                    here
+                  </a>.
+                </p>
+                <h4 style="display: inline;"><span style="color: var(--primary-color); font-weight: bold;">Modeling π and e through Approximation and Application</span></h4>
+                <span style="display: inline;"> &bull; Python, Jupyter Notebook <i>(April 2023 – May 2023)</i></span>
+                <p style="margin-top: 5px;">
+                  Collaborated on a project to approximate π and e using both numerical and geometric methods in Python. 
+                  Leveraged these approximations in a damped pendulum physics simulation to demonstrate real-world 
+                  applications of fundamental constants, highlighting the practical intersection between theoretical math 
+                  and applied science.
+                </p>
+                <h4 style="display: inline;"><span style="color: var(--primary-color); font-weight: bold;">Gitlet</span></h4>
+                <span style="display: inline;"> &bull; Java <i>(June 2024)</i></span>
+                <p style="margin-top: 5px;">
+                  Recreated core Git version control functionalities—including <em>add</em>, <em>commit</em>, <em>branch</em>, and <em>merge</em>—
+                  entirely from scratch in Java. Designed and implemented internal data structures to track file states, handle branching logic,
+                  and manage snapshot history, while ensuring error handling and workflow consistency. Focused extensively on system
+                  architecture, object-oriented design, and testing to deliver a fully functioning mini Git system from the ground up.
+                </p>
+                <h4 style="display: inline;"><span style="color: var(--primary-color); font-weight: bold;">Ants vs. SomeBees</span></h4>
+                <span style="display: inline;"> &bull; Python <i>(March 2024)</i></span>
+                <p style="margin-top: 5px;">
+                  Implemented a multi-phase Python project emphasizing object-oriented programming, inheritance, and composition through replicating the video game "Plants vs. Zombies".
+                  Developed specialized classes of 'Ants' and 'Bees' that 
+                  override and extend base classes, manage dynamic game states, and interact seamlessly with each other. 
+                  Strengthened debugging and testing skills by writing local tests and iteratively refining the game mechanics.
+                </p>
             </section>
 
+            
             <section id="extracurriculars">
                 <h2 style="margin-top: -80px";>Extracurriculars</h2>
                 <h4 style="display: inline;"><span style="color: var(--primary-color); font-weight: bold;">Student Advisory Board Member</span></h4>
