@@ -29,13 +29,6 @@
             width: 100%;
             z-index: 1000;
         }
-        header h1 {
-            margin: 0;
-        }
-        nav {
-            display: flex;
-            align-items: center;
-        }
         nav a {
             color: var(--primary-color);
             text-decoration: none;
@@ -51,13 +44,6 @@
             margin-right: 20px;
             margin-bottom: 20px;
             border-radius: 20px;
-        }
-        #AdamMahmoud {
-            display: flex;
-            align-items: flex-start;
-        }
-        #AdamMahmoud > div {
-            flex: 1;
         }
         .split-container {
             display: flex;
@@ -79,7 +65,6 @@
             width: 50%;
             overflow: auto;
             padding-left: 55px;
-            white-space: nowrap;
         }
         .right-section {
             flex: 1;
@@ -92,26 +77,13 @@
             font-size: 1.6em;
             font-style: italic;
             color: var(--primary-color);
-            padding-left: 4px;
-            padding-right: 2px;
-        }
-        .container {
-            display: flex;
-            align-items: baseline;
-            margin-bottom: 0;
-        }
-        #typingContainer {
-            display: inline-block;
-            width: 250px;
-            overflow: hidden;
-            vertical-align: bottom;
         }
     </style>
 </head>
 <body>
     <header>
-        <nav><a href="#" onclick="sendEmail()" style="font-weight: bold; font-size: 1.3em;">Adam McNelis Mahmoud</a></nav>
-        <nav style="margin-right: 50px;">
+        <nav><a href="#" onclick="sendEmail()" style="font-weight: bold; font-size: 1.3em;">Adam Mahmoud</a></nav>
+        <nav>
             <a href="#about">About</a>
             <a href="#education">Education</a>
             <a href="#experience">Experience</a>
@@ -122,97 +94,50 @@
 
     <div class="split-container">
         <div class="left-section">
-            <section id="AdamMahmoud">
+            <section id="profile">
                 <img src="profile.jpeg" alt="Adam Mahmoud">
-                <div>
-                    <h2 class="container">
-                        <span>Hi! I'm&nbsp</span>
-                        <span class="highlighted-name">Adam Mahmoud</span>
-                        <span>.</span>
-                    </h2>
-                    <p>Aspiring <span style="color: var(--primary-color);">data scientist</span><br>and problem solver.</p>
-                    <p>I am especially interested in <br>and currently pursuing <span id="typingContainer"><span id="typingAnimation" style="color: var(--primary-color);"></span></span></p>
-                    <h4>Let's connect!</h4>
-                    <div style="margin-top: -17px; display: flex;">
-                        <a href="https://www.linkedin.com/in/adam-mcnelis-mahmoud" target="_blank">
-                            <img src="linkedin.png" alt="LinkedIn" style="width: 25px; height: 25px; margin-right: 5px;">
-                        </a>
-                        <a href="mailto:adam.mcmoud@berkeley.edu">
-                            <img src="email.png" alt="Email" style="width: 25px; height: 25px; margin-right: 5px;">
-                        </a>
-                        <a href="https://github.com/AdamMMahmoud" target="_blank">
-                            <img src="github.png" alt="GitHub" style="width: 25px; height: 25px;">
-                        </a>
-                    </div>
-                </div>
+                <h2 class="highlighted-name">Adam Mahmoud</h2>
+                <p>Data scientist and problem solver with a passion for data-driven insights and real-world applications. Currently double majoring in Data Science and Applied Mathematics at UC Berkeley.</p>
             </section>
         </div>
         <div class="right-section">
             <section id="about">
                 <h2>About</h2>
-                <p>I’m a junior at UC Berkeley, double majoring in Data Science and Applied Mathematics. I enjoy using data to solve complex problems and am currently exploring machine learning and numerical analysis.</p>
+                <p>I’m a junior at UC Berkeley with a focus on applying data science techniques to solve complex problems. My studies emphasize applied math, modeling, and numerical analysis.</p>
             </section>
             <section id="education">
                 <h2>Education</h2>
-                <h4>University of California, Berkeley</h4>
-                <p>Double major in Data Science and Applied Mathematics, Class of 2026.</p>
+                <p><b>University of California, Berkeley</b> (Aug 2022 – May 2026)</p>
+                <p>B.A. in Data Science (Applied Math and Modeling)<br>B.A. in Applied Mathematics (Numerical Analysis)<br>Cumulative GPA: 3.82</p>
             </section>
             <section id="experience">
                 <h2>Experience</h2>
-                <p>Include details about your experiences here.</p>
+                <h3>Student Data Analyst</h3>
+                <p><i>Enrollment Management Department, UC Berkeley (Sept 2023 – Present)</i></p>
+                <p>Analyzed and visualized student data using Python, SQL, and Tableau to inform strategic enrollment decisions. Developed interactive visualizations for the department’s website to showcase enrollment trends and student demographics, directly contributing to a 1% increase in in-state student enrollment.</p>
+
+                <h3>Community Assistant</h3>
+                <p><i>Asset Living - Spectra Southside (Jan 2024 – Apr 2024)</i></p>
+                <p>Managed resident inquiries and led the annual Housing Fair, resulting in 30+ tours and 20 new leases. Supported daily building operations and coordinated social media outreach for housing promotions.</p>
             </section>
             <section id="projects">
                 <h2>Projects</h2>
-                <p>Include details about your projects here.</p>
+                <h3>Spam Email Classification</h3>
+                <p>Developed a logistic regression model in Python to classify emails with 85% accuracy, using feature engineering techniques and performance evaluation with ROC curves.</p>
+
+                <h3>Cook County Housing Price Prediction</h3>
+                <p>Built a predictive model for housing prices using Python and scikit-learn. Designed a robust data pipeline for preprocessing and mitigating biases in historical data.</p>
+
+                <h3>Exploring Indian NGO Distribution</h3>
+                <p>Collaborated with Daanmatch to analyze the geographic distribution of NGOs in India, presenting key findings to stakeholders at a symposium.</p>
             </section>
             <section id="skills">
                 <h2>Skills</h2>
-                <p>Python, Java, SQL, HTML, CSS, Data Visualization.</p>
+                <p><b>Programming:</b> Python, Java, SQL, Regex, LaTeX</p>
+                <p><b>Libraries/Tools:</b> Numpy, Pandas, Scikit-learn, Tableau, Excel</p>
+                <p><b>Languages:</b> Spanish (California State Seal of Biliteracy)</p>
             </section>
         </div>
     </div>
-
-    <script>
-        var words = ["data science.", "machine learning.", "artificial intelligence.", "numerical analysis."];
-        var wordIndex = 0;
-        var typingSpeed = 80; // in milliseconds
-        var deleteSpeed = 75; // in milliseconds
-        var typingAnimation = document.getElementById("typingAnimation");
-        var isTyping = true;
-
-        function typeWriter() {
-            if (isTyping) {
-                var word = words[wordIndex];
-                var i = 0;
-                var typingInterval = setInterval(function() {
-                    typingAnimation.innerHTML += word.charAt(i);
-                    i++;
-                    if (i > word.length) {
-                        clearInterval(typingInterval);
-                        isTyping = false;
-                        setTimeout(deleteWord, 1000); // hold for 1 second
-                    }
-                }, typingSpeed);
-            }
-        }
-
-        function deleteWord() {
-            var word = words[wordIndex];
-            var i = word.length - 1;
-            var deleteInterval = setInterval(function() {
-                var currentText = typingAnimation.innerHTML;
-                typingAnimation.innerHTML = currentText.slice(0, -1);
-                i--;
-                if (i < 0) {
-                    clearInterval(deleteInterval);
-                    wordIndex = (wordIndex + 1) % words.length;
-                    isTyping = true;
-                    setTimeout(typeWriter, 200); // delay before typing next word
-                }
-            }, deleteSpeed);
-        }
-
-        typeWriter();
-    </script>
 </body>
 </html>
