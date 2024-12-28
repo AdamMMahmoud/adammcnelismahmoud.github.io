@@ -4,12 +4,114 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Adam McNelis Mahmoud</title>
-    <link rel="stylesheet" href="style.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital,wght@1,400&display=swap');
+        :root {
+            --background-color: #f8f7f7;
+            --header-bg-color: #fff;
+            --primary-color: #447bbb;
+        }
+        body {
+            font-family: system-ui, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: var(--background-color);
+        }
+        header {
+            background-color: var(--header-bg-color);
+            color: var(--primary-color);
+            padding: 10px 30px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            position: fixed;
+            top: 0;
+            width: 100%;
+            z-index: 1000;
+        }
+        header h1 {
+            margin: 0;
+        }
+        nav {
+            display: flex;
+            align-items: center;
+        }
+        nav a {
+            color: var(--primary-color);
+            text-decoration: none;
+            padding: 0 20px;
+            transition: all 0.3s ease;
+        }
+        section {
+            padding: 50px;
+        }
+        img {
+            max-width: 220px;
+            height: auto;
+            margin-right: 20px;
+            margin-bottom: 20px;
+            border-radius: 20px;
+        }
+        #AdamMahmoud {
+            display: flex;
+            align-items: flex-start;
+        }
+        #AdamMahmoud > div {
+            flex: 1;
+        }
+        .split-container {
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            align-items: center;
+            overflow: hidden;
+        }
+        .left-section {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            position: fixed;
+            top: 0;
+            left: 0;
+            bottom: 0;
+            width: 50%;
+            overflow: auto;
+            padding-left: 55px;
+            white-space: nowrap;
+        }
+        .right-section {
+            flex: 1;
+            overflow-y: auto;
+            padding: 0 20px;
+            margin-left: 50%;
+        }
+        .highlighted-name {
+            font-family: 'DM Serif Display', serif;
+            font-size: 1.6em;
+            font-style: italic;
+            color: var(--primary-color);
+            padding-left: 4px;
+            padding-right: 2px;
+        }
+        .container {
+            display: flex;
+            align-items: baseline;
+            margin-bottom: 0;
+        }
+        #typingContainer {
+            display: inline-block;
+            width: 250px;
+            overflow: hidden;
+            vertical-align: bottom;
+        }
+    </style>
 </head>
 <body>
     <header>
-        <nav><a href="#">Adam Mahmoud</a></nav>
-        <nav>
+        <nav><a href="#" onclick="sendEmail()" style="font-weight: bold; font-size: 1.3em;">Adam Mahmoud</a></nav>
+        <nav style="margin-right: 50px;">
             <a href="#about">About</a>
             <a href="#education">Education</a>
             <a href="#experience">Experience</a>
@@ -20,19 +122,28 @@
 
     <div class="split-container">
         <div class="left-section">
-            <section id="ProfileSection">
-                <h2 class="container">
-                    <span>Hi! I'm&nbsp</span>
-                    <span class="highlighted-name">Adam Mahmoud</span>
-                    <span>.</span>
-                </h2>
-                <p>Aspiring data scientist<br>and problem solver.</p>
-                <p>I am especially interested in <br>and currently pursuing <span id="typingContainer"></span></p>
-                <h4>Let's connect!</h4>
-                <div class="social-links">
-                    <a href="https://www.linkedin.com/in/adam-mcnelis-mahmoud" target="_blank">LinkedIn</a>
-                    <a href="mailto:adam.mcmoud@berkeley.edu">Email</a>
-                    <a href="https://github.com/AdamMMahmoud" target="_blank">GitHub</a>
+            <section id="AdamMahmoud">
+                <img src="profile.jpg" alt="Adam Mahmoud">
+                <div>
+                    <h2 class="container">
+                        <span>Hi! I'm&nbsp</span>
+                        <span class="highlighted-name">Adam Mahmoud</span>
+                        <span>.</span>
+                    </h2>
+                    <p>Aspiring <span style="color: var(--primary-color);">data scientist</span><br>and problem solver.</p>
+                    <p>I am especially interested in <br>and currently pursuing <span id="typingContainer"><span id="typingAnimation" style="color: var(--primary-color);"></span></span></p>
+                    <h4>Let's connect!</h4>
+                    <div style="margin-top: -17px; display: flex;">
+                        <a href="https://www.linkedin.com/in/adam-mcnelis-mahmoud" target="_blank">
+                            <img src="linkedin.png" alt="LinkedIn" style="width: 25px; height: 25px; margin-right: 5px;">
+                        </a>
+                        <a href="mailto:adam.mcmoud@berkeley.edu">
+                            <img src="email.png" alt="Email" style="width: 25px; height: 25px; margin-right: 5px;">
+                        </a>
+                        <a href="https://github.com/AdamMMahmoud" target="_blank">
+                            <img src="github.png" alt="GitHub" style="width: 25px; height: 25px;">
+                        </a>
+                    </div>
                 </div>
             </section>
         </div>
@@ -48,19 +159,60 @@
             </section>
             <section id="experience">
                 <h2>Experience</h2>
-                <p>Include your professional and academic experiences here.</p>
+                <p>Include details about your experiences here.</p>
             </section>
             <section id="projects">
                 <h2>Projects</h2>
-                <p>Include project details here.</p>
+                <p>Include details about your projects here.</p>
             </section>
             <section id="skills">
                 <h2>Skills</h2>
-                <p>Python, Java, SQL, Data Visualization, HTML, CSS.</p>
+                <p>Python, Java, SQL, HTML, CSS, Data Visualization.</p>
             </section>
         </div>
     </div>
 
-    <script src="script.js"></script>
+    <script>
+        var words = ["data science.", "machine learning.", "problem solving.", "numerical analysis."];
+        var wordIndex = 0;
+        var typingSpeed = 115; // in milliseconds
+        var deleteSpeed = 75; // in milliseconds
+        var typingAnimation = document.getElementById("typingAnimation");
+        var isTyping = true;
+
+        function typeWriter() {
+            if (isTyping) {
+                var word = words[wordIndex];
+                var i = 0;
+                var typingInterval = setInterval(function() {
+                    typingAnimation.innerHTML += word.charAt(i);
+                    i++;
+                    if (i > word.length) {
+                        clearInterval(typingInterval);
+                        isTyping = false;
+                        setTimeout(deleteWord, 1000); // hold for 1 second
+                    }
+                }, typingSpeed);
+            }
+        }
+
+        function deleteWord() {
+            var word = words[wordIndex];
+            var i = word.length - 1;
+            var deleteInterval = setInterval(function() {
+                var currentText = typingAnimation.innerHTML;
+                typingAnimation.innerHTML = currentText.slice(0, -1);
+                i--;
+                if (i < 0) {
+                    clearInterval(deleteInterval);
+                    wordIndex = (wordIndex + 1) % words.length;
+                    isTyping = true;
+                    setTimeout(typeWriter, 200); // delay before typing next word
+                }
+            }, deleteSpeed);
+        }
+
+        typeWriter();
+    </script>
 </body>
 </html>
