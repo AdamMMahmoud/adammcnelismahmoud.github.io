@@ -20,7 +20,7 @@
         header {
             background-color: var(--header-bg-color);
             color: var(--primary-color);
-            padding: 10px 120px;
+            padding: 10px 30px;
             display: flex;
             justify-content: space-between;
             align-items: center;
@@ -28,6 +28,13 @@
             top: 0;
             width: 100%;
             z-index: 1000;
+        }
+        header nav:first-child {
+          margin-left: 40px; /* or your desired value */
+        }
+        
+        header nav:last-child {
+          margin-right: 40px; /* or your desired value */
         }
         header h1 {
             margin: 0;
