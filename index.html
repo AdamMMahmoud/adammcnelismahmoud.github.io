@@ -6,7 +6,6 @@
     <meta name="description" content="Adam Mahmoud's Personal Website">
     <meta name="author" content="Adam Mahmoud">
     <title>Adam Mahmoud</title>
-    <link rel="stylesheet" href="styles.css">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
     <style>
         body {
@@ -17,100 +16,90 @@
             line-height: 1.6;
         }
 
-        section {
-            max-width: 900px;
-            margin: 0 auto;
-            padding: 2rem;
-        }
-
-        .timeline {
+        .timeline-container {
             position: relative;
+            margin: 0 auto;
+            width: 90%;
+            max-width: 1200px;
             padding: 2rem 0;
         }
 
-        .timeline::before {
+        .timeline-container::before {
             content: '';
             position: absolute;
             top: 0;
             left: 50%;
             width: 4px;
             height: 100%;
-            background: #4CAF50;
+            background: #000;
             transform: translateX(-50%);
         }
 
         .timeline-item {
             position: relative;
-            width: 50%;
-            padding: 1rem 2rem;
-        }
-
-        .timeline-item:nth-child(odd) {
-            left: 0;
-            text-align: right;
+            margin-bottom: 4rem;
+            display: flex;
+            justify-content: flex-start;
+            align-items: center;
         }
 
         .timeline-item:nth-child(even) {
-            left: 50%;
-            text-align: left;
+            justify-content: flex-end;
         }
 
-        .timeline-item .content {
-            display: inline-block;
+        .timeline-item-content {
+            position: relative;
             background: #fff;
             padding: 1rem;
             border-radius: 8px;
             box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-            position: relative;
+            max-width: 40%;
+            text-align: left;
         }
 
-        .timeline-item .content h3 {
-            margin-top: 0;
-            color: #333;
+        .timeline-item:nth-child(even) .timeline-item-content {
+            text-align: right;
         }
 
-        .timeline-item .line {
+        .timeline-item-line {
             position: absolute;
-            top: 50%;
-            width: calc(50% - 4px);
-            height: 2px;
+            top: 0;
+            bottom: 0;
+            width: 4px;
             background: #4CAF50;
         }
 
-        .timeline-item:nth-child(odd) .line {
+        .timeline-item:nth-child(odd) .timeline-item-line {
             left: 50%;
         }
 
-        .timeline-item:nth-child(even) .line {
+        .timeline-item:nth-child(even) .timeline-item-line {
             right: 50%;
         }
 
-        .timeline-item .line span {
-            display: inline-block;
-            height: 10px;
-            width: 10px;
-            background: #4CAF50;
-            border-radius: 50%;
+        .timeline-item-horizontal {
             position: absolute;
-            top: -4px;
+            width: 30px;
+            height: 4px;
+            background: #4CAF50;
         }
 
-        .timeline-item:nth-child(odd) .line span {
-            right: -5px;
+        .timeline-item:nth-child(odd) .timeline-item-horizontal {
+            left: calc(50% + 4px);
         }
 
-        .timeline-item:nth-child(even) .line span {
-            left: -5px;
+        .timeline-item:nth-child(even) .timeline-item-horizontal {
+            right: calc(50% + 4px);
+        }
+
+        h2 {
+            text-align: center;
+            margin-bottom: 2rem;
         }
 
         @media (max-width: 768px) {
-            .timeline-item {
-                width: 100%;
-                text-align: center;
-            }
-
-            .timeline-item .line {
-                display: none;
+            .timeline-item-content {
+                max-width: 80%;
             }
         }
     </style>
@@ -120,10 +109,13 @@
         <h1 style="text-align: center;">Adam Mahmoud</h1>
     </header>
 
-    <section id="timeline" class="timeline">
+    <section class="timeline-container">
+        <h2>My Journey</h2>
+
         <div class="timeline-item">
-            <div class="line"><span></span></div>
-            <div class="content">
+            <div class="timeline-item-line"></div>
+            <div class="timeline-item-horizontal"></div>
+            <div class="timeline-item-content">
                 <h3>Student Data Analyst</h3>
                 <p><strong>September 2023 – Present</strong></p>
                 <p>Query, clean, and visualize university data using Python, Tableau, and SQL. Develop the EM website and collaborate with department heads to inform strategic enrollment decisions.</p>
@@ -131,8 +123,9 @@
         </div>
 
         <div class="timeline-item">
-            <div class="line"><span></span></div>
-            <div class="content">
+            <div class="timeline-item-line"></div>
+            <div class="timeline-item-horizontal"></div>
+            <div class="timeline-item-content">
                 <h3>Community Assistant</h3>
                 <p><strong>January 2024 – April 2024</strong></p>
                 <p>Managed housing operations, annual fairs, and social media outreach. Coordinated events that resulted in 20 new leases.</p>
@@ -140,8 +133,9 @@
         </div>
 
         <div class="timeline-item">
-            <div class="line"><span></span></div>
-            <div class="content">
+            <div class="timeline-item-line"></div>
+            <div class="timeline-item-horizontal"></div>
+            <div class="timeline-item-content">
                 <h3>Student Advisory Board Member</h3>
                 <p><strong>October 2024 – Present</strong></p>
                 <p>Advise the College of CDSS on student priorities and diversity initiatives through pulse surveys and discussions.</p>
@@ -149,8 +143,9 @@
         </div>
 
         <div class="timeline-item">
-            <div class="line"><span></span></div>
-            <div class="content">
+            <div class="timeline-item-line"></div>
+            <div class="timeline-item-horizontal"></div>
+            <div class="timeline-item-content">
                 <h3>MPS Scholars Program Mentor</h3>
                 <p><strong>August 2024 – Present</strong></p>
                 <p>Mentor math students, providing tailored advice and fostering community in the MPS department.</p>
@@ -158,8 +153,9 @@
         </div>
 
         <div class="timeline-item">
-            <div class="line"><span></span></div>
-            <div class="content">
+            <div class="timeline-item-line"></div>
+            <div class="timeline-item-horizontal"></div>
+            <div class="timeline-item-content">
                 <h3>Bunny Trails Game</h3>
                 <p><strong>July 2024</strong></p>
                 <p>Developed a 2D Java-based game with multiplayer modes, interactive mechanics, and graphical enhancements.</p>
@@ -167,8 +163,9 @@
         </div>
 
         <div class="timeline-item">
-            <div class="line"><span></span></div>
-            <div class="content">
+            <div class="timeline-item-line"></div>
+            <div class="timeline-item-horizontal"></div>
+            <div class="timeline-item-content">
                 <h3>Exploring 2022 Indian NGO Distribution</h3>
                 <p><strong>January 2024 – May 2024</strong></p>
                 <p>Analyzed the geographic distribution of NGOs in India, culminating in a symposium presentation.</p>
@@ -176,8 +173,9 @@
         </div>
 
         <div class="timeline-item">
-            <div class="line"><span></span></div>
-            <div class="content">
+            <div class="timeline-item-line"></div>
+            <div class="timeline-item-horizontal"></div>
+            <div class="timeline-item-content">
                 <h3>Modeling π and e through Approximation and Application</h3>
                 <p><strong>April 2023 – May 2023</strong></p>
                 <p>Used numerical methods in Python to approximate π and e and applied results to a physics simulation.</p>
