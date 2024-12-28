@@ -35,9 +35,24 @@
             transform: translateX(-50%);
         }
 
+        .timeline-months {
+            position: absolute;
+            left: 50%;
+            top: 0;
+            transform: translateX(-50%);
+            font-size: 0.8rem;
+            color: #555;
+        }
+
+        .timeline-months span {
+            display: block;
+            position: relative;
+            margin-bottom: 3rem;
+        }
+
         .timeline-item {
             position: relative;
-            margin-bottom: 4rem;
+            margin-bottom: 3rem;
             display: flex;
             justify-content: flex-start;
             align-items: center;
@@ -64,32 +79,30 @@
         .timeline-item-line {
             position: absolute;
             top: 0;
-            bottom: 0;
             width: 4px;
             background: #4CAF50;
         }
 
+        .timeline-item-line span {
+            display: inline-block;
+            height: 10px;
+            width: 10px;
+            background: #4CAF50;
+            border-radius: 50%;
+            position: absolute;
+            top: -5px;
+        }
+
         .timeline-item:nth-child(odd) .timeline-item-line {
-            left: 50%;
+            left: calc(50% - 8px);
         }
 
         .timeline-item:nth-child(even) .timeline-item-line {
-            right: 50%;
+            right: calc(50% - 8px);
         }
 
-        .timeline-item-horizontal {
-            position: absolute;
-            width: 30px;
-            height: 4px;
-            background: #4CAF50;
-        }
-
-        .timeline-item:nth-child(odd) .timeline-item-horizontal {
-            left: calc(50% + 4px);
-        }
-
-        .timeline-item:nth-child(even) .timeline-item-horizontal {
-            right: calc(50% + 4px);
+        .timeline-item-line span {
+            top: -4px;
         }
 
         h2 {
@@ -112,9 +125,18 @@
     <section class="timeline-container">
         <h2>My Journey</h2>
 
+        <!-- Timeline months -->
+        <div class="timeline-months">
+            <span>January 2023</span>
+            <span>July 2023</span>
+            <span>January 2024</span>
+            <span>July 2024</span>
+            <span>December 2024</span>
+        </div>
+
+        <!-- Timeline items -->
         <div class="timeline-item">
-            <div class="timeline-item-line"></div>
-            <div class="timeline-item-horizontal"></div>
+            <div class="timeline-item-line" style="height: calc(100px); top: 0;"><span></span></div>
             <div class="timeline-item-content">
                 <h3>Student Data Analyst</h3>
                 <p><strong>September 2023 – Present</strong></p>
@@ -123,8 +145,7 @@
         </div>
 
         <div class="timeline-item">
-            <div class="timeline-item-line"></div>
-            <div class="timeline-item-horizontal"></div>
+            <div class="timeline-item-line" style="height: calc(60px); top: calc(50px);"><span></span></div>
             <div class="timeline-item-content">
                 <h3>Community Assistant</h3>
                 <p><strong>January 2024 – April 2024</strong></p>
@@ -133,8 +154,7 @@
         </div>
 
         <div class="timeline-item">
-            <div class="timeline-item-line"></div>
-            <div class="timeline-item-horizontal"></div>
+            <div class="timeline-item-line" style="height: calc(100px); top: calc(20px);"><span></span></div>
             <div class="timeline-item-content">
                 <h3>Student Advisory Board Member</h3>
                 <p><strong>October 2024 – Present</strong></p>
@@ -143,8 +163,7 @@
         </div>
 
         <div class="timeline-item">
-            <div class="timeline-item-line"></div>
-            <div class="timeline-item-horizontal"></div>
+            <div class="timeline-item-line" style="height: calc(100px); top: calc(100px);"><span></span></div>
             <div class="timeline-item-content">
                 <h3>MPS Scholars Program Mentor</h3>
                 <p><strong>August 2024 – Present</strong></p>
@@ -153,8 +172,7 @@
         </div>
 
         <div class="timeline-item">
-            <div class="timeline-item-line"></div>
-            <div class="timeline-item-horizontal"></div>
+            <div class="timeline-item-line" style="height: calc(40px); top: calc(10px);"><span></span></div>
             <div class="timeline-item-content">
                 <h3>Bunny Trails Game</h3>
                 <p><strong>July 2024</strong></p>
@@ -163,8 +181,7 @@
         </div>
 
         <div class="timeline-item">
-            <div class="timeline-item-line"></div>
-            <div class="timeline-item-horizontal"></div>
+            <div class="timeline-item-line" style="height: calc(80px); top: calc(30px);"><span></span></div>
             <div class="timeline-item-content">
                 <h3>Exploring 2022 Indian NGO Distribution</h3>
                 <p><strong>January 2024 – May 2024</strong></p>
@@ -173,8 +190,7 @@
         </div>
 
         <div class="timeline-item">
-            <div class="timeline-item-line"></div>
-            <div class="timeline-item-horizontal"></div>
+            <div class="timeline-item-line" style="height: calc(40px); top: calc(20px);"><span></span></div>
             <div class="timeline-item-content">
                 <h3>Modeling π and e through Approximation and Application</h3>
                 <p><strong>April 2023 – May 2023</strong></p>
