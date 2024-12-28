@@ -12,7 +12,7 @@
             --primary-color: #447bbb;
         }
         body {
-            font-family: system-ui, sans-serif;
+            font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif, sans-serif;
             margin: 0;
             padding: 0;
             background-color: var(--background-color);
@@ -102,16 +102,16 @@
         }
         #typingContainer {
             display: inline-block;
-            width: 250px;
+            width: 250px; /* Adjust width as needed */
             overflow: hidden;
             vertical-align: bottom;
         }
     </style>
 </head>
 <body>
-    <header>
+    <header style="padding: 22px;">
         <nav><a href="#" onclick="sendEmail()" style="font-weight: bold; font-size: 1.3em;">Adam McNelis Mahmoud</a></nav>
-        <nav style="margin-right: 50px;">
+        <nav style="margin-right: 50px";>
             <a href="#about">About</a>
             <a href="#education">Education</a>
             <a href="#experience">Experience</a>
@@ -130,52 +130,88 @@
                         <span class="highlighted-name">Adam Mahmoud</span>
                         <span>.</span>
                     </h2>
-                    <p>Aspiring <span style="color: var(--primary-color);">data scientist</span><br>and problem solver.</p>
-                    <p>I am especially interested in <br>and currently pursuing <span id="typingContainer"><span id="typingAnimation" style="color: var(--primary-color);"></span></span></p>
+                    <p>Aspiring <span style="color: var(--primary-color); margin-top: 0;">data scientist</span><br>and <span style="color: var(--primary-color);">machine learning engineer</span>,<br>current <span style="color: var(--primary-color);">Data Science & Applied Mathematics student</span> at UC Berkeley.</p>
+                    <p>I am especially interested in and<br>currently pursuing <span id="typingContainer"><span id="typingAnimation" style="color: var(--primary-color);"></span></span></p>
+                    <p id="email" style="display:none;">You can reach me by email at <span style="color: var(--primary-color);">adam.mcmoud@berkeley.edu</span></p>
                     <h4>Let's connect!</h4>
                     <div style="margin-top: -17px; display: flex;">
-                        <a href="https://www.linkedin.com/in/adam-mcnelis-mahmoud" target="_blank">
+                        <a href="https://www.linkedin.com/in/adam-mcnelis-mahmoud/" target="_blank">
                             <img src="linkedin.png" alt="LinkedIn" style="width: 25px; height: 25px; margin-right: 5px;">
                         </a>
                         <a href="mailto:adam.mcmoud@berkeley.edu">
                             <img src="email.png" alt="Email" style="width: 25px; height: 25px; margin-right: 5px;">
                         </a>
+                        <a href="Adam_Mahmoud_Resume.pdf" target="_blank">
+                            <img src="resume.png" alt="Resume" style="width: 23px; height: 23px; margin-right: 5px;">
+                        </a>
                         <a href="https://github.com/AdamMMahmoud" target="_blank">
-                            <img src="github.png" alt="GitHub" style="width: 25px; height: 25px;">
+                            <img src="github.png" alt="Github" style="width: 23px; height: 23px;">
                         </a>
                     </div>
                 </div>
             </section>
+            
         </div>
         <div class="right-section">
             <section id="about">
-                <h2>About</h2>
-                <p>I’m a junior at UC Berkeley, double majoring in Data Science and Applied Mathematics. I enjoy using data to solve complex problems and am currently exploring machine learning and numerical analysis.</p>
+                <h2 style="margin-top: 60px";>About</h2>
+                <p>I am a third year Electrical Engineering and Computer Science student at the University of California, Berkeley, originally from Palo Alto, CA. 
+                    My interests and studies revolve primarily around software engineering, and I am committed to expanding my knowledge 
+                    across its various domains, both inside and outside of the classroom, to develop my technical capabilities and define my specific goals and path within the industry. 
+                    Opportunities and positions I have engaged in while at Berkeley include pursuing research at the intersection of medicine 
+                    and technology, exploring aerospace, web development, and machine learning, and interning as a full-stack developer. As I navigate my upper-division coursework and minor in Data Science, 
+                    <span style="color: var(--primary-color);"><b>I am especially interested in 
+                    pursuing AI/ML to learn how to best leverage data to drive insightful decision-making and develop 
+                    innovative, perceptive solutions to complex and relevant problems</b></span>. Thank you so much for stopping by, please feel free to reach out and/or connect with me at one of the links to the left. Talk soon!
+                </p>
             </section>
             <section id="education">
-                <h2>Education</h2>
-                <h4><span style="color: var(--primary-color);"><b>University of California, Berkeley</b></span></h4>
-                <p>Double major in Data Science and Applied Mathematics, Class of 2026.</p>
+                <h2 style="margin-top: -80px";>Education</h2>
+                <h4><span style="color: var(--primary-color);">University of California, Berkeley</span> &bull; 2022-26<br></h4>
+                <p style="margin-top: -17px";><em>Electrical Engineering and Computer Science (BS)</em><br></p>
+                <p style="margin-top: -12px;"><em>Data Science (Minor)</em><br></p>
             </section>
             <section id="experience">
-                <h2>Experience</h2>
-                <p>Include details about your experiences here.</p>
+                <h2 style="margin-top: -80px";>Experience</h2>
+                <h4 style="display: inline;"><span style="color: var(--primary-color); font-weight: bold;">Software Engineer Intern</span></h4>
+                <span style="display: inline;"> &bull; <span style="font-weight: bold;">Glocal</span> <i>(Feb. 2024 - Aug. 2024)</i></span>
+                <p style="margin-top: 5px";>Helped migrate codebase from React Native to Swift to develop a native iOS application to significantly enhance performance and efficiency and optimize app functionality and user experience. Assisted in the preliminary development of Glocal’s AI model using data from pilot programs in London and Chicago to offer deliverable insight and analysis on community incentives to boost civic engagement.
+                 Conducted and submitted rigorous, biweekly code reviews to maintain Glocal’s quality standards, objectives, and best practices, worked on bug fixes and performance enhancements to ensure a seamless user experience, and documented technical processes and developments for internal use and knowledge sharing.</p>
+                 <h4 style="display: inline;"><span style="color: var(--primary-color); font-weight: bold;">Research Software Engineer</span></h4>
+                 <span style="display: inline;"> &bull; <span style="font-weight: bold;">VTOL @ Berkeley</span> <i>(Sept. 2023 - Dec. 2023)</i></span>
+                <p style="margin-top: 5px";>Leveraged Python/Jupyter Notebooks to solve and/or model complex physical and mathematical equations and concepts including aerodynamics (drag, lift, Bernoulli’s), propulsion (thrust, power), control (stability, inertia, basic control theory), 
+                    structural analysis (stress, strain, buckling), and energy (consumption, efficiency). Presented research to offer comprehensive analysis and 
+                    insight to help facilitate the preliminary development of the physical systems.</p>
+                    <h4 style="display: inline;"><span style="color: var(--primary-color); font-weight: bold;">Research Assistant</span></h4>
+                    <span style="display: inline;"> &bull; <span style="font-weight: bold;">Khalid Lab/Jadoo Technologies</span> <i>(Jan. 2023 - Sept. 2023)</i></span>
+                <p style="margin-top: 5px";>Worked under Dr. Waqas Khalid on a joint research product with UCSF building nanotechnology-based portable blood sampling devices. 
+                Contributed to the development of the team’s supervised machine learning model (PyTorch) trained on historical blood sample data to predict potential health conditions and recommend future diagnostic tests from the results of their devices.</p>
             </section>
             <section id="projects">
-                <h2>Projects</h2>
-                <p>Include details about your projects here.</p>
+                <h2 style="margin-top: -80px";>Projects</h2>
+                <p><span style="color: var(--primary-color); font-weight: bold;">SIXT33N:</span> Utilized ML techniques (PCA, SVD) and C++ to build a voice-controlled model car with a microcontroller (Arduino), analog circuits, and PCBs; engineered op-amp and BJT circuits for closed-loop control logic, along with audio signal amplification and filtering circuits to support four voice commands.<br></p>
+                <p><span style="color: var(--primary-color); font-weight: bold;">ANN Network:</span> Wrote the RISC-V assembly code needed to run a simple artificial neural network (ANN) on the Venus RISC-V simulator, including the implementation of basic operations such as vector dot products, matrix-matrix multiplications, argmax, and activation functions, which I combined to load and execute a pre-trained network to classify handwritten digits from the MNIST benchmark set.<br></p>
+                <p><span style="color: var(--primary-color); font-weight: bold;">CPU:</span> Built a fully functional, 32-bit CPU with a pipelined RISC-V datapath in Logisim capable of running machine code converted from RISC-V assembly code.<br></p>
+                <p><span style="color: var(--primary-color); font-weight: bold;">NGram:</span> Replicated Google’s Ngram Viewer in Java using HashMaps, Collections, Iterators, and the Princeton Algorithms Library for reading, parsing, and converting files to track history of word usage.<br></p>
+                <p><span style="color: var(--primary-color); font-weight: bold;">WordNet:</span> Built a visual and numerical model of hyponym and hypernym correlations and tracked word tree lineage in Java, using Directed Acyclic Graphs, HashSets, and ArrayLists, as well as algorithms including depth-first search graph traversal and weighted quick union.<br></p>
+                <p><span style="color: var(--primary-color); font-weight: bold;">2D World Generation:</span> Designed and implemented the game functionality, UI, and data storage of a 2D tile-based, user-interactive world exploration engine in Java that uses pseudo-random algorithms to generate custom worlds and gameplay.<br></p>
+                <p><span style="color: var(--primary-color); font-weight: bold;">Scheme:</span> Implemented the core features for a lisp interpreter in Python using a recursive descent parser, utilizing lexical and syntactic analysis as well as input parsing.<br></p>
+                <p><span style="color: var(--primary-color); font-weight: bold;">Arcade Games:</span> Built fully rendered replications of the classic puzzle games 2048 and Tetris in Java that incorporate user data storage for scores, responsive user controls through keyboard inputs (WASD, UDLR), and various Java data structures and algorithms for game logic.<br></p>
+                <p><span style="color: var(--primary-color); font-weight: bold;">Website:</span> Built using HTML and CSS, hosted on GitHub Pages. View the code <a href="https://github.com/jackgaletti/jackgalettiwebsite/tree/main" style="color: var(--primary-color); text-decoration: underline;" target="_blank">here</a>.</p>
+
             </section>
             <section id="skills">
-                <h2>Skills</h2>
-                <p>Python, Java, SQL, HTML, CSS, Data Visualization.</p>
+                <h2 style="margin-top: -80px";>Skills</h2>
+                <p><span style="color: var(--primary-color); font-weight: bold;">Languages:</span> Python, Java, C/C++, SQL, RISC-V, Swift, HTML, JavaScript, CSS<br></p>
+                <p><span style="color: var(--primary-color); font-weight: bold;">Developer Tools:</span> Git, Google Cloud, VS Code, IntelliJ, Xcode, Figma, SwiftUI<br></p>
+                <p><span style="color: var(--primary-color); font-weight: bold;">Libraries:</span> NumPy, Matplotlib, pandas, React, React Native</p>
             </section>
         </div>
     </div>
-
     <script>
-        var words = ["data science.", "machine learning.", "artificial intelligence.", "numerical analysis."];
+        var words = ["web development.", "software engineering.", "artificial intelligence.", "machine learning.", "research.", "data science."];
         var wordIndex = 0;
-        var typingSpeed = 80; // in milliseconds
+        var typingSpeed = 115; // in milliseconds
         var deleteSpeed = 75; // in milliseconds
         var typingAnimation = document.getElementById("typingAnimation");
         var isTyping = true;
@@ -189,6 +225,7 @@
                     i++;
                     if (i > word.length) {
                         clearInterval(typingInterval);
+                        isTyping
                         isTyping = false;
                         setTimeout(deleteWord, 1000); // hold for 1 second
                     }
@@ -212,7 +249,63 @@
             }, deleteSpeed);
         }
 
-        typeWriter();
+        typeWriter(); // start typing animation initially
+
+        function showEmail() {
+            var emailButton = document.querySelector("button");
+            var emailText = document.getElementById("email");
+            if (emailText.style.display === "none") {
+                emailText.style.display = "block";
+                emailButton.style.display = "none";
+            }
+        }
+    </script>
+    <script>
+        // Smooth scroll to the target section with adjusted offset
+        function scrollToSection(sectionId) {
+            var section = document.getElementById(sectionId);
+            if (section) {
+                var headerHeight = document.querySelector('header').offsetHeight;
+                var subheaderOffset = 80;
+                var targetOffset = section.offsetTop - headerHeight - subheaderOffset;
+                window.scrollTo({
+                    top: targetOffset,
+                    behavior: 'smooth'
+                });
+            }
+        }
+    
+        // Add event listeners to the navigation links to scroll to the corresponding sections
+        document.addEventListener('DOMContentLoaded', function() {
+            var navLinks = document.querySelectorAll('nav a');
+            navLinks.forEach(function(link) {
+                link.addEventListener('click', function(event) {
+                    event.preventDefault();
+                    var sectionId = this.getAttribute('href').substring(1);
+                    scrollToSection(sectionId);
+                });
+            });
+        });
+        function sendEmail() {
+            window.location.href = "mailto:jackcgaletti@gmail.com";
+        }
+
+        function isMobileDevice() {
+            return /Mobi|Android/i.test(navigator.userAgent);
+        }
+
+        function showMessageForMobile() {
+            if (isMobileDevice()) {
+                document.body.innerHTML = `
+                    <div style="display: flex; flex-direction: column; justify-content: center; align-items: center; height: calc(100vh - 400px); text-align: center; padding: 20px; margin-top: 100px;">
+                        <h3 style="margin: 0; font-weight: bold;">Hey 👋</h3>
+                        <h3 style="margin: 20px 0 0 0; font-weight: normal;">Thanks for stopping by! It looks like you're using a mobile device. For the best experience, please view my website on a desktop or laptop. Thanks!</h3>
+                        <h3 style="margin: 20px 0 0 0; font-weight: bold;">- Jack</h3>
+                    </div>`;
+            }
+        }
+
+        showMessageForMobile();
     </script>
 </body>
 </html>
