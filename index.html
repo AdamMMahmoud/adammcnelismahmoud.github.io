@@ -1,422 +1,466 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Adam McNelis Mahmoud</title>
-  <style>
-    @import url('https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital,wght@1,400&display=swap');
-
-    :root{
-      --background-color:#f8f7f7;
-      --header-bg-color:#fff;
-      --primary-color:#447bbb;
-      --header-h:72px;
-      --gutter:40px;
-      --left-min:300px;
-      --left-max:420px;
-    }
-
-    *{ box-sizing:border-box; }
-    html{ text-size-adjust:100%; -webkit-text-size-adjust:100%; }
-    body{
-      font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-      line-height:1.45;
-      margin:0;
-      background:var(--background-color);
-      padding-top:var(--header-h);
-      color:#111;
-      font-size-adjust:0.5;
-    }
-
-    header{
-      position:fixed; inset:0 0 auto 0; height:var(--header-h);
-      display:flex; align-items:center; justify-content:space-between;
-      background:var(--header-bg-color); color:var(--primary-color);
-      padding:22px 30px; z-index:1000; border-bottom:1px solid #e8e8e8;
-    }
-    header nav:first-child{ margin-left:10px; }
-    header nav:last-child{ margin-right:10px; }
-    nav{ display:flex; align-items:center; }
-    nav a{
-      color:var(--primary-color); text-decoration:none; padding:0 16px;
-      transition:opacity .2s ease;
-    }
-    nav a:hover{ opacity:.7; }
-
-    .split-container{
-      display:grid;
-      grid-template-columns: minmax(var(--left-min), var(--left-max)) minmax(640px, 1fr);
-      gap:var(--gutter);
-      align-items:start;
-      padding:24px clamp(16px, 3vw, 48px);
-    }
-
-    .left-section{
-      position:sticky; top:calc(var(--header-h) + 12px);
-      max-height:calc(100dvh - var(--header-h) - 24px);
-      overflow:auto;
-      padding-left:55px;
-      white-space:normal;
-      display:flex;
-      flex-direction:column;
-      align-items:center;
-      justify-content:center;
-    }
-
-    .right-section{
-      min-width:0;
-      padding-right: clamp(8px, 2vw, 24px);
-      overflow-y:auto;
-    }
-
-    section{
-      padding:0 0 48px 0;
-      scroll-margin-top: calc(var(--header-h) + 16px);
-    }
-
-    img{
-      max-width:240px; height:auto; margin-right:20px; margin-bottom:20px;
-      border-radius:20px; vertical-align:middle;
-    }
-
-    #AdamMahmoud{ display:flex; align-items:center; }
-    #AdamMahmoud > div{
-      display:flex; flex-direction:column; justify-content:center;
-      margin-top:0;
-    }
-    #AdamMahmoud h4{ margin-top:10px; }
-
-    .highlighted-name{
-      font-family:'DM Serif Display', serif;
-      font-size:1.6em; font-style:italic; color:var(--primary-color);
-      padding-left:4px; padding-right:2px;
-    }
-
-    .container{ display:flex; align-items:baseline; margin-bottom:0; }
-    #typingContainer{ display:inline-block; width:250px; overflow:hidden; vertical-align:bottom; }
-
-    h2{ margin:0 0 12px 0; font-weight:600; }
-    h4{ margin:8px 0 0 0; font-weight:600; }
-    .left-section p{ margin:6px 0; line-height:1.35; }
-
-    @media (max-width:1280px){
-      :root{ --left-max:360px; --gutter:28px; }
-      #typingContainer{ width:220px; }
-    }
-
-    @media (max-width:1060px){
-      .split-container{
-        grid-template-columns: minmax(260px, 320px) 1fr;
-        gap:24px;
-      }
-      img{ max-width:200px; }
-    }
-  </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Adam McNelis Mahmoud</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital,wght@1,400&display=swap');
+        :root {
+            --background-color: #f8f7f7;
+            --header-bg-color: #fff;
+            --primary-color: #447bbb;
+        }
+        body {
+            font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: var(--background-color);
+        }
+        header {
+            background-color: var(--header-bg-color);
+            color: var(--primary-color);
+            padding: 10px 30px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            position: fixed;
+            top: 0;
+            width: 100%;
+            z-index: 1000;
+        }
+        header nav:first-child {
+          margin-left: 40px;
+        }
+        
+        header nav:last-child {
+          margin-right: 80px !important;
+        }
+        header h1 {
+            margin: 0;
+        }
+        nav {
+            display: flex;
+            align-items: center;
+        }
+        nav a {
+            color: var(--primary-color);
+            text-decoration: none;
+            padding: 0 20px;
+            transition: all 0.3s ease;
+        }
+        section {
+            padding: 50px;
+        }
+        img {
+            max-width: 240px;
+            height: auto;
+            margin-right: 20px;
+            margin-bottom: 20px;
+            border-radius: 20px;
+            vertical-align: middle;
+        }
+        #AdamMahmoud {
+            display: flex;
+            align-items: center;
+        }
+        #AdamMahmoud > div {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            margin-top: -27px;
+        }
+        #AdamMahmoud h4 {
+            margin-top: 7px;
+        }
+        .split-container {
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            align-items: center;
+            overflow: hidden;
+        }
+        .left-section {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            position: fixed;
+            top: 0;
+            left: 0;
+            bottom: 0;
+            width: 47%;
+            overflow: auto;
+            padding-left: 55px;
+            white-space: nowrap;
+        }
+        .left-section p {
+            margin: 5px 0;
+            line-height: 1.4;
+        }
+        .right-section {
+            flex: 1;
+            overflow-y: auto;
+            padding: 0 20px;
+            margin-left: 47%;
+        }
+        .highlighted-name {
+            font-family: 'DM Serif Display', serif;
+            font-size: 1.6em;
+            font-style: italic;
+            color: var(--primary-color);
+            padding-left: 4px;
+            padding-right: 2px;
+        }
+        .container {
+            display: flex;
+            align-items: baseline;
+            margin-bottom: 0;
+        }
+        #typingContainer {
+            display: inline-block;
+            width: 250px;
+            overflow: hidden;
+            vertical-align: bottom;
+        }
+    </style>
 </head>
 <body>
-  <header>
-    <nav><a href="#" onclick="sendEmail()" style="font-weight:bold; font-size:1.3em;">Adam McNelis Mahmoud</a></nav>
-    <nav>
-      <a href="#about">About</a>
-      <a href="#education">Education</a>
-      <a href="#experience">Experience</a>
-      <a href="#research">Research</a>
-      <a href="#projects">Projects</a>
-      <a href="#extracurriculars">Extracurriculars</a>
-      <a href="#skills">Skills</a>
-      <a href="#coursework">Coursework</a>
-    </nav>
-  </header>
+    <header style="padding: 22px;">
+        <nav><a href="#" onclick="sendEmail()" style="font-weight: bold; font-size: 1.3em;">Adam McNelis Mahmoud</a></nav>
+        <nav style="margin-right: 50px";>
+            <a href="#about">About</a>
+            <a href="#education">Education</a>
+            <a href="#experience">Experience</a>
+            <a href="#research">Research</a>
+            <a href="#projects">Projects</a>
+            <a href="#extracurriculars">Extracurriculars</a>
+            <a href="#skills">Skills</a>
+            <a href="#coursework">Coursework</a>
+        </nav>
+    </header>
 
-  <div class="split-container">
-    <div class="left-section">
-      <section id="AdamMahmoud">
-        <img src="profile.jpg" alt="Adam Mahmoud">
-        <div>
-          <h2 class="container">
-            <span>Hi! I'm&nbsp</span>
-            <span class="highlighted-name">Adam Mahmoud</span>
-          </h2>
-          <p>Aspiring <span style="color: var(--primary-color); margin-top: 0;">data scientist</span><br>and <span style="color: var(--primary-color);">machine learning engineer</span>.</p>
-          <p>Current <span style="color: var(--primary-color);">Data Science</span><br>and <span style="color: var(--primary-color);">Applied Mathematics</span><br>student at <span style="color: var(--primary-color);">UC Berkeley</span>.</p>
-          <p>I am especially interested in and<br>currently pursuing <span id="typingContainer"><span id="typingAnimation" style="color: var(--primary-color);"></span></span></p>
-          <p>You can access my full resume <a href="Adam_Mahmoud_Resume.pdf" target="_blank" style="color: var(--primary-color); text-decoration: underline;">here</a>.</p>
-          <h4>Let's connect!</h4>
-          <div style="margin-top: -17px; display: flex;">
-            <a href="https://www.linkedin.com/in/adam-mcnelis-mahmoud/" target="_blank">
-              <img src="linkedin.png" alt="LinkedIn" style="width: 25px; height: 25px; margin-right: 5px;">
-            </a>
-            <a href="mailto:adam.mcmoud@berkeley.edu">
-              <img src="email.png" alt="Email" style="width: 25px; height: 25px; margin-right: 5px;">
-            </a>
-            <a href="https://github.com/AdamMMahmoud" target="_blank">
-              <img src="github.png" alt="Github" style="width: 23px; height: 23px;">
-            </a>
-          </div>
+    <div class="split-container">
+        <div class="left-section">
+            <section id="AdamMahmoud">
+                <img src="profile.jpg" alt="Adam Mahmoud">
+                <div>
+                    <h2 class="container">
+                        <span>Hi! I'm&nbsp</span>
+                        <span class="highlighted-name">Adam Mahmoud</span>
+                    </h2>
+                    <p>Aspiring <span style="color: var(--primary-color); margin-top: 0;">data scientist</span><br>and <span style="color: var(--primary-color);">machine learning engineer</span>.</p>
+                    <p>Current <span style="color: var(--primary-color);">Data Science</span><br>and <span style="color: var(--primary-color);">Applied Mathematics</span><br>student at <span style="color: var(--primary-color);">UC Berkeley</span>.</p>
+                    <p>I am especially interested in and<br>currently pursuing <span id="typingContainer"><span id="typingAnimation" style="color: var(--primary-color);"></span></span></p>
+                    <p>You can access my full resume <a href="Adam_Mahmoud_Resume.pdf" target="_blank" style="color: var(--primary-color); text-decoration: underline;">here</a>.</p>
+                    <h4>Let's connect!</h4>
+                    <div style="margin-top: -17px; display: flex;">
+                        <a href="https://www.linkedin.com/in/adam-mcnelis-mahmoud/" target="_blank">
+                            <img src="linkedin.png" alt="LinkedIn" style="width: 25px; height: 25px; margin-right: 5px;">
+                        </a>
+                        <a href="mailto:adam.mcmoud@berkeley.edu">
+                            <img src="email.png" alt="Email" style="width: 25px; height: 25px; margin-right: 5px;">
+                        </a>
+                        <a href="https://github.com/AdamMMahmoud" target="_blank">
+                            <img src="github.png" alt="Github" style="width: 23px; height: 23px;">
+                        </a>
+                    </div>
+                </div>
+            </section>
         </div>
-      </section>
+        <div class="right-section">
+            <section id="about">
+                <h2 style="margin-top: 60px";>About</h2>
+                <p>I am a fourth-year student at the University of California, Berkeley, originally from a small town in the Sacramento Valley called Wilton. I am pursuing a double major in Data Science and Applied Mathematics, with a concentration in Numerical Analysis. Currently, I work as a Data Intern at UC Berkeley's Fung Institute for Engineering Leadership, analyzing current student and alumni data to assess program impact. Outside my formal studies and work, I pursue data-focused extracurricular projects and mentor fellow students, driven by my passion for learning and sharing knowledge. Looking ahead, I am primarily interested in contributing to the data science, machine learning, and artificial intelligence domains, applying my mathematics background to enhance my work in these areas. Feel free to reach out if you'd like to discuss my experiences or the worlds of data science and math in general!
+                </p>
+            </section>
+
+            
+            <section id="education">
+                <h2 style="margin-top: -80px;">Education</h2>
+                <h4>
+                    <span style="color: var(--primary-color);">University of California, Berkeley</span> &bull; Fall 2022 - Spring 2026 &bull; <span style="color: var(--primary-color);">GPA: 3.85</span><br>
+                </h4>
+                <p style="margin-top: -17px;">
+                    <p>Data Science (BA)
+                        <span style="font-size: 0.85em; margin-left: 8px; color: #555;">
+                            - Applied Math and Modeling concentration
+                        </span>
+                    </p>
+                </p>
+                <p style="margin-top: -12px;">
+                    <p>Applied Mathematics (BA)
+                        <span style="font-size: 0.85em; margin-left: 8px; color: #555;">
+                            - Numerical Analysis concentration
+                        </span>
+                    </p>
+                </p>
+            </section>
+
+            
+            <section id="experience">
+                <h2 style="margin-top: -80px";>Experience</h2>
+
+                <h4 style="display: inline;"><span style="color: var(--primary-color); font-weight: bold;">Data Intern</span></h4>
+                <span style="display: inline;"> &bull; <span style="font-weight: bold;">Fung Institute for Engineering Leadership, UC Berkeley</span> <i>(Jan. 2025 - Present)</i></span>
+                <p style="margin-top: 5px;">
+                At the Fung Institute, I work to uncover insights from student and alumni data, driving improvements and highlighting the impact of initiatives such as 
+                    the Fung Fellowship and Master of Engineering programs. Using tools like Salesforce and Google Workspace, I manage and refine databases to ensure 
+                    accurate and efficient data tracking. My role also involves creating compelling data visualizations that effectively communicate findings, enabling 
+                    collaboration with teaching teams and stakeholders to advance the institute's mission and share the value of its programs.
+                </p>
+                <h4 style="display: inline;"><span style="color: var(--primary-color); font-weight: bold;">Data Analyst</span></h4>
+                <span style="display: inline;"> &bull; <span style="font-weight: bold;">Enrollment Management (EM) Department, UC Berkeley</span> <i>(Sept. 2023 - Mar. 2025)</i></span>
+                <p style="margin-top: 5px;">
+                  As a Data Analyst, I leveraged SQL, Python, and Tableau to query, clean, and visualize student demographic 
+                  and academic data for strategic enrollment decisions. Collaborating with department heads and fellow analysts, 
+                  I regularly translated complex data into actionable insights; for instance, in 2024, my analysis contributed to enrolling over 800 additional in-state students (a 1% increase from previous years). I also developd interactive, data-driven visualizations for EM's website, writing accessible HTML code 
+                  to enhance user experience and highlight key trends for stakeholders.
+                </p>                
+                <h4 style="display: inline;"><span style="color: var(--primary-color); font-weight: bold;">Admissions Exam Reviewer</span></h4>
+                <span style="display: inline;"> &bull; <span style="font-weight: bold;">Stanford University Mathematics Camp (SUMaC)</span> <i>(Feb. 2025 - Mar. 2025)</i></span>
+                <p style="margin-top: 5px;">
+                At SUMaC, I evaluated admissions exams for Stanford’s most competitive high school math programs, assessing students’ mathematical creativity, logical reasoning, 
+                and proof-based problem solving skills, beyond rigid rubrics. My role involved providing comprehensive written evaluations that highlight each applicant’s strengths, weaknesses,
+                and problem solving approach, directly shaping admission decisions for top candidates.
+                </p>
+            </section>
+
+
+            <section id="research">
+                <h2 style="margin-top: -80px";>Research</h2>
+                <h4 style="display: inline;"><span style="color: var(--primary-color); font-weight: bold;">Analyzing Academic Resource &amp; Funding Allocation at UC Berkeley</span></h4>
+                <span style="display: inline;"> &bull; <span style="font-weight: bold;">UC Berkeley CAPRA</span> <i>(Mar. 2025 – Present)</i></span>
+                <p style="margin-top: 5px;">
+                  Under the supervision of Dr. Stefano Bertozzi, I am conducting an analysis of UC Berkeley's financial landscape for the Academic Senate's Committee on Academic Planning and Funding Allocation (CAPRA). I query and analyze campus-wide financial and enrollment data from UC Berkeley's central database, CalAnswers, utilizing Excel to visualize and interpret revenue streams and expenditure trends across undergraduate and graduate programs. My findings inform CAPRA's strategic planning and resource allocation decisions.
+                </p>
+                <h4 style="display: inline;"><span style="color: var(--primary-color); font-weight: bold;">Exploring Indian Non-Governmental Organization (NGO) Distribution</span></h4>
+                <span style="display: inline;"> &bull; <span style="font-weight: bold;">Data Science Discovery Program</span> <i>(Jan. 2024 – May 2024)</i></span>
+                <p style="margin-top: 5px;">
+                  Through a collaboration with Daanmatch, I led a project that identified geographic areas with high NGO concentrations, 
+                  guiding the strategic allocation of funding and support. I performed exploratory data analysis in Python 
+                  (Pandas, Seaborn, Matplotlib), constructed data pipelines for cleaning/analysis, and standardized and mapped the addresses of over 10,000 NGOs across India, 
+                  primarily using ReGex for address formatting. I presented the team's findings in a poster at the Data Science Discovery Program Symposium.
+                  View the project report <a href="https://github.com/AdamMMahmoud/Projects/tree/main/Daanmatch_NGO_Distribution" target="_blank" style="color: var(--primary-color); text-decoration: underline;">here</a>.
+                </p>
+            </section>
+
+            
+            <section id="projects">
+                <h2 style="margin-top: -80px";>Projects</h2>
+                <h4 style="display: inline;"><span style="color: var(--primary-color); font-weight: bold;">Spam Email Classification</span></h4>
+                <span style="display: inline;"> &bull; Python, Scikit-learn, Pandas, Regex, Matplotlib <i>(November 2024)</i></span>
+                <p style="margin-top: 5px;">
+                  Built a logistic regression model to classify more than 8,000 emails as spam or not spam, 
+                  achieving 85% test set accuracy through feature engineering and model tuning. Leveraged RegEx to parse 
+                  email text, engineering features like custom word presence indicators and punctuation frequency. 
+                  Evaluated performance with precision, recall, and ROC curves, iteratively refining the feature set 
+                  and optimizing hyperparameters to minimize false positives and enhance overall reliability.
+                </p>
+                <h4 style="display: inline;"><span style="color: var(--primary-color); font-weight: bold;">Cook County Housing Price Prediction</span></h4>
+                <span style="display: inline;"> &bull; Python, Scikit-learn, Pandas, Matplotlib, Seaborn <i>(October 2024)</i></span>
+                <p style="margin-top: 5px;">
+                  Developed a predictive model for housing prices using linear regression and a custom data pipeline 
+                  on 500,000+ records. Performed extensive feature engineering—including outlier removal, log 
+                  transformations, and one-hot encoding—while analyzing potential biases to ensure fair and accurate 
+                  results. Validated the model’s performance on real-world data, demonstrating the effectiveness of 
+                  exploratory analysis and iterative refinement in delivering actionable insights.
+                </p>
+                <h4 style="display: inline;"><span style="color: var(--primary-color); font-weight: bold;">Bunny Trails Game</span></h4>
+                <span style="display: inline;"> &bull; Java, IntelliJ, StdDraw <i>(July 2024)</i></span>
+                <p style="margin-top: 5px;">
+                  Built a 2D Java game (2,500+ lines of code) featuring randomly generated worlds driven by user-provided seed numbers.
+                  Implemented multiplayer modes and interactive mechanics, incorporating mouse and keyboard inputs for character
+                  control. Integrated PNG/GIF for graphics, OTF for fonts, and WAV for music, and stored player progress locally
+                  via a text file to maintain persistent gameplay.
+                  <br>
+                  Downloads for Mac and select Windows versions can be found <a href="https://linktr.ee/bunnytrails" target="_blank" style="color: var(--primary-color); text-decoration: underline;">here</a>.
+                </p>
+                <h4 style="display: inline;"><span style="color: var(--primary-color); font-weight: bold;">Gitlet</span></h4>
+                <span style="display: inline;"> &bull; Java <i>(June 2024)</i></span>
+                <p style="margin-top: 5px;">
+                  Recreated core Git version control functionalities—including <em>add</em>, <em>commit</em>, <em>branch</em>, and <em>merge</em>—
+                  entirely from scratch in Java. Designed and implemented internal data structures to track file states, handle branching logic,
+                  and manage snapshot history, while ensuring error handling and workflow consistency. Focused extensively on system
+                  architecture, object-oriented design, and testing to deliver a fully functioning mini Git system from the ground up.
+                </p>
+                <h4 style="display: inline;"><span style="color: var(--primary-color); font-weight: bold;">Ants vs. SomeBees</span></h4>
+                <span style="display: inline;"> &bull; Python <i>(March 2024)</i></span>
+                <p style="margin-top: 5px;">
+                  Implemented a multi-phase Python project emphasizing object-oriented programming, inheritance, and composition through replicating the video game "Plants vs. Zombies".
+                  Developed specialized classes of 'Ants' and 'Bees' that 
+                  override and extend base classes, manage dynamic game states, and interact seamlessly with each other. 
+                  Strengthened debugging and testing skills by writing local tests and iteratively refining the game mechanics.
+                </p>
+                <h4 style="display: inline;"><span style="color: var(--primary-color); font-weight: bold;">Modeling π and e through Approximation and Application</span></h4>
+                <span style="display: inline;"> &bull; Python, Jupyter Notebook <i>(April 2023 – May 2023)</i></span>
+                <p style="margin-top: 5px;">
+                  Collaborated on a project to approximate π and e using both numerical and geometric methods in Python. 
+                  Leveraged these approximations in a damped pendulum physics simulation to demonstrate real-world 
+                  applications of fundamental constants, highlighting the practical intersection between theoretical math 
+                  and applied science.
+                  View the project code, report, and presentation summary <a href="https://github.com/AdamMMahmoud/Projects/tree/main/Math_Modeling_Project" target="_blank" style="color: var(--primary-color); text-decoration: underline;">here</a>.
+                </p>
+            </section>
+
+            
+            <section id="extracurriculars">
+                <h2 style="margin-top: -80px";>Extracurriculars</h2>
+                <h4 style="display: inline;"><span style="color: var(--primary-color); font-weight: bold;">Student Advisory Board Member</span></h4>
+                <span style="display: inline;"> &bull; <span style="font-weight: bold;">College of Computing, Data Science, and Society (CDSS), UC Berkeley</span> <i>(Oct. 2024 – May 2025)</i></span>
+                <p style="margin-top: 5px;">
+                  As a board member, I advise the College of CDSS on student needs and emerging concerns by participating in 
+                  regular pulse surveys and providing feedback on core initiatives. I contribute to discussions around 
+                  advising processes, diversity and inclusion, and student organization support, ensuring that student 
+                  perspectives shape college-wide decisions.
+                </p>
+                <h4 style="display: inline;"><span style="color: var(--primary-color); font-weight: bold;">MPS Scholars Program Mentor</span></h4>
+                <span style="display: inline;"> &bull; <span style="font-weight: bold;">Mathematical and Physical Sciences (MPS) Scholars Program, UC Berkeley</span> <i>(Aug. 2024 – May 2025)</i></span>
+                <p style="margin-top: 5px;">
+                  In this role, I mentor undergraduates majoring in math, holding biweekly group sessions and 
+                  one-on-one meetings to offer tailored academic advice and share my personal experiences. 
+                  My goal is to foster a supportive community within the MPS department, helping students plan their academic/professional careers and stay connected to valuable resources.
+                </p>
+            </section>
+
+            
+            <section id="skills">
+                <h2 style="margin-top: -80px;">Skills</h2>
+                <p>
+                    <span style="color: var(--primary-color); font-weight: bold;">Coding Languages:</span> 
+                    Python, Java, SQL, R, HTML, RegEx, LaTeX
+                </p>
+                <p>
+                    <span style="color: var(--primary-color); font-weight: bold;">Libraries:</span> 
+                    Numpy, Pandas, Scikit-learn, Scipy, Matplotlib/Seaborn
+                </p>
+                <p>
+                    <span style="color: var(--primary-color); font-weight: bold;">Data Analysis Tools:</span> 
+                    Excel, Tableau, Google Sheets, ATLAS.ti
+                </p>
+                <p>
+                    <span style="color: var(--primary-color); font-weight: bold;">Specializations:</span> 
+                    Python in Excel, Clustering Algorithms, Data Pipeline Optimization
+                </p>
+                <p>
+                    <span style="color: var(--primary-color); font-weight: bold;">Languages:</span> 
+                    Spanish (California State Seal of Biliteracy)
+                </p>
+            </section>
+
+
+            <section id="coursework">
+                <h2 style="margin-top: -80px;">Relevant Coursework</h2>
+                <p>
+                    <span style="color: var(--primary-color); font-weight: bold;">Data Science:</span>
+                    Foundations of Data Science, Computational Structures in Data Science, Principles & Techniques of Data Science, Data Structures and Programming Methodology, Numerical Analysis for Data Science, Probability for Data Science, Data Engineering, Data Mining & Analytics
+                </p>
+                <p>
+                    <span style="color: var(--primary-color); font-weight: bold;">Mathematics:</span>
+                    Multivariable Calculus, Linear Algebra & Differential Equations, Abstract Algebra, Real Analysis, Complex Analysis, Numerical Analysis
+                </p>
+            </section>
+
+            
+        </div>
     </div>
+    <script>
+        var words = ["data science.", "machine learning.", "artificial intelligence.", "data visualization.", "research.", "computational mathematics.", "predictive modeling.", "optimization."];
+        var wordIndex = 0;
+        var typingSpeed = 75;
+        var deleteSpeed = 75;
+        var typingAnimation = document.getElementById("typingAnimation");
+        var isTyping = true;
 
-    <div class="right-section">
-      <section id="about">
-        <h2>About</h2>
-        <p>I am a fourth-year student at the University of California, Berkeley, originally from a small town in the Sacramento Valley called Wilton. I am pursuing a double major in Data Science and Applied Mathematics, with a concentration in Numerical Analysis. Currently, I work as a Data Intern at UC Berkeley's Fung Institute for Engineering Leadership, analyzing current student and alumni data to assess program impact. Outside my formal studies and work, I pursue data-focused extracurricular projects and mentor fellow students, driven by my passion for learning and sharing knowledge. Looking ahead, I am primarily interested in contributing to the data science, machine learning, and artificial intelligence domains, applying my mathematics background to enhance my work in these areas. Feel free to reach out if you'd like to discuss my experiences or the worlds of data science and math in general!
-        </p>
-      </section>
-
-      <section id="education">
-        <h2>Education</h2>
-        <h4>
-          <span style="color: var(--primary-color);">University of California, Berkeley</span> &bull; Fall 2022 - Spring 2026 &bull; <span style="color: var(--primary-color);">GPA: 3.85</span><br>
-        </h4>
-        <p style="margin-top: -17px;">
-          <p>Data Science (BA)
-            <span style="font-size: 0.85em; margin-left: 8px; color: #555;">
-              - Applied Math and Modeling concentration
-            </span>
-          </p>
-        </p>
-        <p style="margin-top: -12px;">
-          <p>Applied Mathematics (BA)
-            <span style="font-size: 0.85em; margin-left: 8px; color: #555;">
-              - Numerical Analysis concentration
-            </span>
-          </p>
-        </p>
-      </section>
-
-      <section id="experience">
-        <h2>Experience</h2>
-
-        <h4 style="display: inline;"><span style="color: var(--primary-color); font-weight: bold;">Data Intern</span></h4>
-        <span style="display: inline;"> &bull; <span style="font-weight: bold;">Fung Institute for Engineering Leadership, UC Berkeley</span> <i>(Jan. 2025 - Present)</i></span>
-        <p style="margin-top: 5px;">
-        At the Fung Institute, I work to uncover insights from student and alumni data, driving improvements and highlighting the impact of initiatives such as 
-            the Fung Fellowship and Master of Engineering programs. Using tools like Salesforce and Google Workspace, I manage and refine databases to ensure 
-            accurate and efficient data tracking. My role also involves creating compelling data visualizations that effectively communicate findings, enabling 
-            collaboration with teaching teams and stakeholders to advance the institute's mission and share the value of its programs.
-        </p>
-        <h4 style="display: inline;"><span style="color: var(--primary-color); font-weight: bold;">Data Analyst</span></h4>
-        <span style="display: inline;"> &bull; <span style="font-weight: bold;">Enrollment Management (EM) Department, UC Berkeley</span> <i>(Sept. 2023 - Mar. 2025)</i></span>
-        <p style="margin-top: 5px;">
-          As a Data Analyst, I leveraged SQL, Python, and Tableau to query, clean, and visualize student demographic 
-          and academic data for strategic enrollment decisions. Collaborating with department heads and fellow analysts, 
-          I regularly translated complex data into actionable insights; for instance, in 2024, my analysis contributed to enrolling over 800 additional in-state students (a 1% increase from previous years). I also developd interactive, data-driven visualizations for EM's website, writing accessible HTML code 
-          to enhance user experience and highlight key trends for stakeholders.
-        </p>                
-        <h4 style="display: inline;"><span style="color: var(--primary-color); font-weight: bold;">Admissions Exam Reviewer</span></h4>
-        <span style="display: inline;"> &bull; <span style="font-weight: bold;">Stanford University Mathematics Camp (SUMaC)</span> <i>(Feb. 2025 - Mar. 2025)</i></span>
-        <p style="margin-top: 5px;">
-        At SUMaC, I evaluated admissions exams for Stanford’s most competitive high school math programs, assessing students’ mathematical creativity, logical reasoning, 
-        and proof-based problem solving skills, beyond rigid rubrics. My role involved providing comprehensive written evaluations that highlight each applicant’s strengths, weaknesses,
-        and problem solving approach, directly shaping admission decisions for top candidates.
-        </p>
-      </section>
-
-      <section id="research">
-        <h2>Research</h2>
-        <h4 style="display: inline;"><span style="color: var(--primary-color); font-weight: bold;">Analyzing Academic Resource &amp; Funding Allocation at UC Berkeley</span></h4>
-        <span style="display: inline;"> &bull; <span style="font-weight: bold;">UC Berkeley CAPRA</span> <i>(Mar. 2025 – Present)</i></span>
-        <p style="margin-top: 5px;">
-          Under the supervision of Dr. Stefano Bertozzi, I am conducting an analysis of UC Berkeley's financial landscape for the Academic Senate's Committee on Academic Planning and Funding Allocation (CAPRA). I query and analyze campus-wide financial and enrollment data from UC Berkeley's central database, CalAnswers, utilizing Excel to visualize and interpret revenue streams and expenditure trends across undergraduate and graduate programs. My findings inform CAPRA's strategic planning and resource allocation decisions.
-        </p>
-        <h4 style="display: inline;"><span style="color: var(--primary-color); font-weight: bold;">Exploring Indian Non-Governmental Organization (NGO) Distribution</span></h4>
-        <span style="display: inline;"> &bull; <span style="font-weight: bold;">Data Science Discovery Program</span> <i>(Jan. 2024 – May 2024)</i></span>
-        <p style="margin-top: 5px;">
-          Through a collaboration with Daanmatch, I led a project that identified geographic areas with high NGO concentrations, 
-          guiding the strategic allocation of funding and support. I performed exploratory data analysis in Python 
-          (Pandas, Seaborn, Matplotlib), constructed data pipelines for cleaning/analysis, and standardized and mapped the addresses of over 10,000 NGOs across India, 
-          primarily using ReGex for address formatting. I presented the team's findings in a poster at the Data Science Discovery Program Symposium.
-          View the project report <a href="https://github.com/AdamMMahmoud/Projects/tree/main/Daanmatch_NGO_Distribution" target="_blank" style="color: var(--primary-color); text-decoration: underline;">here</a>.
-        </p>
-      </section>
-
-      <section id="projects">
-        <h2>Projects</h2>
-        <h4 style="display: inline;"><span style="color: var(--primary-color); font-weight: bold;">Spam Email Classification</span></h4>
-        <span style="display: inline;"> &bull; Python, Scikit-learn, Pandas, Regex, Matplotlib <i>(November 2024)</i></span>
-        <p style="margin-top: 5px;">
-          Built a logistic regression model to classify more than 8,000 emails as spam or not spam, 
-          achieving 85% test set accuracy through feature engineering and model tuning. Leveraged RegEx to parse 
-          email text, engineering features like custom word presence indicators and punctuation frequency. 
-          Evaluated performance with precision, recall, and ROC curves, iteratively refining the feature set 
-          and optimizing hyperparameters to minimize false positives and enhance overall reliability.
-        </p>
-        <h4 style="display: inline;"><span style="color: var(--primary-color); font-weight: bold;">Cook County Housing Price Prediction</span></h4>
-        <span style="display: inline;"> &bull; Python, Scikit-learn, Pandas, Matplotlib, Seaborn <i>(October 2024)</i></span>
-        <p style="margin-top: 5px;">
-          Developed a predictive model for housing prices using linear regression and a custom data pipeline 
-          on 500,000+ records. Performed extensive feature engineering—including outlier removal, log 
-          transformations, and one-hot encoding—while analyzing potential biases to ensure fair and accurate 
-          results. Validated the model’s performance on real-world data, demonstrating the effectiveness of 
-          exploratory analysis and iterative refinement in delivering actionable insights.
-        </p>
-        <h4 style="display: inline;"><span style="color: var(--primary-color); font-weight: bold;">Bunny Trails Game</span></h4>
-        <span style="display: inline;"> &bull; Java, IntelliJ, StdDraw <i>(July 2024)</i></span>
-        <p style="margin-top: 5px;">
-          Built a 2D Java game (2,500+ lines of code) featuring randomly generated worlds driven by user-provided seed numbers.
-          Implemented multiplayer modes and interactive mechanics, incorporating mouse and keyboard inputs for character
-          control. Integrated PNG/GIF for graphics, OTF for fonts, and WAV for music, and stored player progress locally
-          via a text file to maintain persistent gameplay.
-          <br>
-          Downloads for Mac and select Windows versions can be found <a href="https://linktr.ee/bunnytrails" target="_blank" style="color: var(--primary-color); text-decoration: underline;">here</a>.
-        </p>
-        <h4 style="display: inline;"><span style="color: var(--primary-color); font-weight: bold;">Gitlet</span></h4>
-        <span style="display: inline;"> &bull; Java <i>(June 2024)</i></span>
-        <p style="margin-top: 5px;">
-          Recreated core Git version control functionalities—including <em>add</em>, <em>commit</em>, <em>branch</em>, and <em>merge</em>—
-          entirely from scratch in Java. Designed and implemented internal data structures to track file states, handle branching logic,
-          and manage snapshot history, while ensuring error handling and workflow consistency. Focused extensively on system
-          architecture, object-oriented design, and testing to deliver a fully functioning mini Git system from the ground up.
-        </p>
-        <h4 style="display: inline;"><span style="color: var(--primary-color); font-weight: bold;">Ants vs. SomeBees</span></h4>
-        <span style="display: inline;"> &bull; Python <i>(March 2024)</i></span>
-        <p style="margin-top: 5px;">
-          Implemented a multi-phase Python project emphasizing object-oriented programming, inheritance, and composition through replicating the video game "Plants vs. Zombies".
-          Developed specialized classes of 'Ants' and 'Bees' that 
-          override and extend base classes, manage dynamic game states, and interact seamlessly with each other. 
-          Strengthened debugging and testing skills by writing local tests and iteratively refining the game mechanics.
-        </p>
-        <h4 style="display: inline;"><span style="color: var(--primary-color); font-weight: bold;">Modeling π and e through Approximation and Application</span></h4>
-        <span style="display: inline;"> &bull; Python, Jupyter Notebook <i>(April 2023 – May 2023)</i></span>
-        <p style="margin-top: 5px;">
-          Collaborated on a project to approximate π and e using both numerical and geometric methods in Python. 
-          Leveraged these approximations in a damped pendulum physics simulation to demonstrate real-world 
-          applications of fundamental constants, highlighting the practical intersection between theoretical math 
-          and applied science.
-          View the project code, report, and presentation summary <a href="https://github.com/AdamMMahmoud/Projects/tree/main/Math_Modeling_Project" target="_blank" style="color: var(--primary-color); text-decoration: underline;">here</a>.
-        </p>
-      </section>
-
-      <section id="extracurriculars">
-        <h2>Extracurriculars</h2>
-        <h4 style="display: inline;"><span style="color: var(--primary-color); font-weight: bold;">Student Advisory Board Member</span></h4>
-        <span style="display: inline;"> &bull; <span style="font-weight: bold;">College of Computing, Data Science, and Society (CDSS), UC Berkeley</span> <i>(Oct. 2024 – May 2025)</i></span>
-        <p style="margin-top: 5px;">
-          As a board member, I advise the College of CDSS on student needs and emerging concerns by participating in 
-          regular pulse surveys and providing feedback on core initiatives. I contribute to discussions around 
-          advising processes, diversity and inclusion, and student organization support, ensuring that student 
-          perspectives shape college-wide decisions.
-        </p>
-        <h4 style="display: inline;"><span style="color: var(--primary-color); font-weight: bold;">MPS Scholars Program Mentor</span></h4>
-        <span style="display: inline;"> &bull; <span style="font-weight: bold;">Mathematical and Physical Sciences (MPS) Scholars Program, UC Berkeley</span> <i>(Aug. 2024 – May 2025)</i></span>
-        <p style="margin-top: 5px;">
-          In this role, I mentor undergraduates majoring in math, holding biweekly group sessions and 
-          one-on-one meetings to offer tailored academic advice and share my personal experiences. 
-          My goal is to foster a supportive community within the MPS department, helping students plan their academic/professional careers and stay connected to valuable resources.
-        </p>
-      </section>
-
-      <section id="skills">
-        <h2>Skills</h2>
-        <p>
-          <span style="color: var(--primary-color); font-weight: bold;">Coding Languages:</span> 
-          Python, Java, SQL, R, HTML, RegEx, LaTeX
-        </p>
-        <p>
-          <span style="color: var(--primary-color); font-weight: bold;">Libraries:</span> 
-          Numpy, Pandas, Scikit-learn, Scipy, Matplotlib/Seaborn
-        </p>
-        <p>
-          <span style="color: var(--primary-color); font-weight: bold;">Data Analysis Tools:</span> 
-          Excel, Tableau, Google Sheets, ATLAS.ti
-        </p>
-        <p>
-          <span style="color: var(--primary-color); font-weight: bold;">Specializations:</span> 
-          Python in Excel, Clustering Algorithms, Data Pipeline Optimization
-        </p>
-        <p>
-          <span style="color: var(--primary-color); font-weight: bold;">Languages:</span> 
-          Spanish (California State Seal of Biliteracy)
-        </p>
-      </section>
-
-      <section id="coursework">
-        <h2>Relevant Coursework</h2>
-        <p>
-          <span style="color: var(--primary-color); font-weight: bold;">Data Science:</span>
-          Foundations of Data Science, Computational Structures in Data Science, Principles & Techniques of Data Science, Data Structures and Programming Methodology, Numerical Analysis for Data Science, Probability for Data Science, Data Engineering, Data Mining & Analytics
-        </p>
-        <p>
-          <span style="color: var(--primary-color); font-weight: bold;">Mathematics:</span>
-          Multivariable Calculus, Linear Algebra & Differential Equations, Abstract Algebra, Real Analysis, Complex Analysis, Numerical Analysis
-        </p>
-      </section>
-    </div>
-  </div>
-
-  <script>
-    var words = ["data science.", "machine learning.", "artificial intelligence.", "data visualization.", "research.", "computational mathematics.", "predictive modeling.", "optimization."];
-    var wordIndex = 0;
-    var typingSpeed = 75;
-    var deleteSpeed = 75;
-    var typingAnimation = document.getElementById("typingAnimation");
-    var isTyping = true;
-
-    function typeWriter() {
-      if (isTyping) {
-        var word = words[wordIndex];
-        var i = 0;
-        var typingInterval = setInterval(function() {
-          typingAnimation.innerHTML += word.charAt(i);
-          i++;
-          if (i > word.length) {
-            clearInterval(typingInterval);
-            isTyping = false;
-            setTimeout(deleteWord, 1000);
-          }
-        }, typingSpeed);
-      }
-    }
-
-    function deleteWord() {
-      var word = words[wordIndex];
-      var i = word.length - 1;
-      var deleteInterval = setInterval(function() {
-        var currentText = typingAnimation.innerHTML;
-        typingAnimation.innerHTML = currentText.slice(0, -1);
-        i--;
-        if (i < 0) {
-          clearInterval(deleteInterval);
-          wordIndex = (wordIndex + 1) % words.length;
-          isTyping = true;
-          setTimeout(typeWriter, 200);
+        function typeWriter() {
+            if (isTyping) {
+                var word = words[wordIndex];
+                var i = 0;
+                var typingInterval = setInterval(function() {
+                    typingAnimation.innerHTML += word.charAt(i);
+                    i++;
+                    if (i > word.length) {
+                        clearInterval(typingInterval);
+                        isTyping
+                        isTyping = false;
+                        setTimeout(deleteWord, 1000); // hold for 1 second
+                    }
+                }, typingSpeed);
+            }
         }
-      }, deleteSpeed);
-    }
 
-    typeWriter();
+        function deleteWord() {
+            var word = words[wordIndex];
+            var i = word.length - 1;
+            var deleteInterval = setInterval(function() {
+                var currentText = typingAnimation.innerHTML;
+                typingAnimation.innerHTML = currentText.slice(0, -1);
+                i--;
+                if (i < 0) {
+                    clearInterval(deleteInterval);
+                    wordIndex = (wordIndex + 1) % words.length;
+                    isTyping = true;
+                    setTimeout(typeWriter, 200);
+                }
+            }, deleteSpeed);
+        }
 
-    function showEmail() {
-      var emailButton = document.querySelector("button");
-      var emailText = document.getElementById("email");
-      if (emailText.style.display === "none") {
-        emailText.style.display = "block";
-        emailButton.style.display = "none";
-      }
-    }
+        typeWriter();
 
-    function sendEmail() {
-      window.location.href = "mailto:adam.mcmoud@berkeley.edu";
-    }
+        function showEmail() {
+            var emailButton = document.querySelector("button");
+            var emailText = document.getElementById("email");
+            if (emailText.style.display === "none") {
+                emailText.style.display = "block";
+                emailButton.style.display = "none";
+            }
+        }
+    </script>
+    <script>
+        function scrollToSection(sectionId) {
+            var section = document.getElementById(sectionId);
+            if (section) {
+                var headerHeight = document.querySelector('header').offsetHeight;
+                var subheaderOffset = 35;
+                var targetOffset = section.offsetTop - headerHeight - subheaderOffset;
+                window.scrollTo({
+                    top: targetOffset,
+                    behavior: 'smooth'
+                });
+            }
+        }
+    
+        document.addEventListener('DOMContentLoaded', function() {
+            var navLinks = document.querySelectorAll('nav a');
+            navLinks.forEach(function(link) {
+                link.addEventListener('click', function(event) {
+                    event.preventDefault();
+                    var sectionId = this.getAttribute('href').substring(1);
+                    scrollToSection(sectionId);
+                });
+            });
+        });
+        function sendEmail() {
+            window.location.href = "mailto:adam.mcmoud@berkeley.edu";
+        }
 
-    function isMobileDevice() {
-      return /Mobi|Android/i.test(navigator.userAgent);
-    }
+        function isMobileDevice() {
+            return /Mobi|Android/i.test(navigator.userAgent);
+        }
 
-    function showMessageForMobile() {
-      if (isMobileDevice()) {
-        document.body.innerHTML = `
-          <div style="display: flex; flex-direction: column; justify-content: center; align-items: center; height: calc(100vh - 400px); text-align: center; padding: 20px; margin-top: 100px;">
-            <h3 style="margin: 0; font-weight: bold;">Hey 👋</h3>
-            <h3 style="margin: 20px 0 0 0; font-weight: normal;">Thanks for stopping by! It looks like you're using a mobile device. For the best experience, please view my website on a desktop or laptop. Thanks!</h3>
-            <h3 style="margin: 20px 0 0 0; font-weight: bold;">- Adam</h3>
-          </div>`;
-      }
-    }
+        function showMessageForMobile() {
+            if (isMobileDevice()) {
+                document.body.innerHTML = `
+                    <div style="display: flex; flex-direction: column; justify-content: center; align-items: center; height: calc(100vh - 400px); text-align: center; padding: 20px; margin-top: 100px;">
+                        <h3 style="margin: 0; font-weight: bold;">Hey 👋</h3>
+                        <h3 style="margin: 20px 0 0 0; font-weight: normal;">Thanks for stopping by! It looks like you're using a mobile device. For the best experience, please view my website on a desktop or laptop. Thanks!</h3>
+                        <h3 style="margin: 20px 0 0 0; font-weight: bold;">- Adam</h3>
+                    </div>`;
+            }
+        }
 
-    showMessageForMobile();
-  </script>
+        showMessageForMobile();
+    </script>
 </body>
 </html>
