@@ -237,6 +237,32 @@
 
             <section id="research">
                 <h2 style="margin-top: -80px";>Research</h2>
+
+                <h4 style="display: inline;">
+                <span style="color: var(--primary-color); font-weight: bold;">
+                  Seasonality Clustering — A Hierarchical Agglomerative Approach
+                </span>
+              </h4>
+              <span style="display: inline;"> &bull; 
+                <span style="font-weight: bold;">Omnium Internship</span> 
+                <i>(Summer 2025)</i>
+              </span>
+              <p style="margin-top: 5px;">
+                As part of my internship at Omnium, I designed a research project exploring seasonality-based clustering methods for pricing analytics. 
+                The question I proposed was: <em>"How can we replace fixed quad-period seasonality with data-driven seasonal clusters to reduce pricing regression 
+                  complexity and capture true demand variation."</em>
+                To answer this, I implemented two hierarchical agglomerative clustering pipelines - one that clustered weeks just based off of their average dollar velocities,
+                  and one that also included distance between weeks in a custom distance metric in order to prioritize continuous clusters.
+                I evaluated these models across seven linkage criteria (focusing on single linkage), using dendrograms, silhouette scores, Calinski–Harabasz indices, 
+                  and Davies–Bouldin indicies to quantify results. 
+                Ultimately, I applied these clustered season definitions to pricing regressions, resulting in reduced multicollinearity compared to standard 13-period models 
+                and improved demand predictions. 
+                View the <a href="Projects/Omnium Intern Project/Seasonality Clustering - Intern Project.pdf" 
+                target="_blank" style="color: var(--primary-color); text-decoration: underline;">slides</a> 
+                or explore the <a href="https://github.com/AdamMMahmoud/Projects/tree/main/Omnium%20Intern%20Project" 
+                target="_blank" style="color: var(--primary-color); text-decoration: underline;">code</a>.
+              </p>
+                
                 <h4 style="display: inline;"><span style="color: var(--primary-color); font-weight: bold;">Analyzing Academic Resource &amp; Funding Allocation at UC Berkeley</span></h4>
                 <span style="display: inline;"> &bull; <span style="font-weight: bold;">UC Berkeley CAPRA</span> <i>(Mar. 2025 – May 2025)</i></span>
                 <p style="margin-top: 5px;">
