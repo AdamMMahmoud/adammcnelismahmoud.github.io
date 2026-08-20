@@ -12,7 +12,7 @@
             --primary-color: #447bbb;
         }
         body {
-            font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif, sans-serif;
+            font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', sans-serif;
             margin: 0;
             padding: 0;
             background-color: var(--background-color);
@@ -30,11 +30,11 @@
             z-index: 1000;
         }
         header nav:first-child {
-          margin-left: 40px;
+            margin-left: 40px;
         }
         
         header nav:last-child {
-          margin-right: 80px !important;
+            margin-right: 80px !important;
         }
         header h1 {
             margin: 0;
@@ -150,8 +150,7 @@
                         <span>Hi! I'm&nbsp</span>
                         <span class="highlighted-name">Adam Mahmoud</span>
                     </h2>
-                    <p>Aspiring <span style="color: var(--primary-color); margin-top: 0;">data scientist</span><br>and <span style="color: var(--primary-color);">machine learning engineer</span>.</p>
-                    <p>Current <span style="color: var(--primary-color);">Data Science</span><br>and <span style="color: var(--primary-color);">Applied Mathematics</span><br>student at <span style="color: var(--primary-color);">UC Berkeley</span>.</p>
+                    <p><span style="color: var(--primary-color);">Data Scientist</span><br>at aven.</p>
                     <p>I am especially interested in and<br>currently pursuing <span id="typingContainer"><span id="typingAnimation" style="color: var(--primary-color);"></span></span></p>
                     <p>You can access my <a href="Mahmoud_Adam_Resume.pdf" target="_blank" style="color: var(--primary-color); text-decoration: underline;"><strong>resume</strong></a> or <a href="Mahmoud_Adam_CV.pdf" target="_blank" style="color: var(--primary-color); text-decoration: underline;"><strong>CV</strong></a>.</p>
                     <h4>Let's connect!</h4>
@@ -169,12 +168,12 @@
                 </div>
             </section>
         </div>
+
         <div class="right-section">
             <section id="about">
                 <h2 style="margin-top: 60px";>About</h2>
                 <p>
-                    I am a fourth-year student at the University of California, Berkeley, pursuing a double major in Data Science and Applied Mathematics, with a concentration in Numerical Analysis. 
-                    <!-- Bringing my experience from recent work with Omnium, I am excited to be joining <a href="https://www.aven.com/" target="_blank" rel="noopener noreferrer">Aven</a> as a Data Scientist beginning in June. -->
+                    I am currently a Data Scientist at <a href="https://www.aven.com/" target="_blank" rel="noopener noreferrer">Aven</a>, working to lower the cost of capital through data-driven analysis and modeling. I am a graduate of the University of California, Berkeley, where I earned B.A. degrees in Data Science and Applied Mathematics, with concentrations in Applied Math and Modeling and Numerical Analysis.
                 </p>
             </section>
 
@@ -204,15 +203,14 @@
             <section id="experience">
                 <h2 style="margin-top: -80px";>Experience</h2>
 
-                <!-- <h4 style="display: inline;"><span style="color: var(--primary-color); font-weight: bold;">Data Scientist</span></h4>
-                <span style="display: inline;"> &bull; <span style="font-weight: bold;">Aven</span> <i>(Incoming June 2026)</i></span>
-                <p style="margin-top: 5px;">
-                    I am excited to be joining Aven as a Data Scientist beginning in June.
-                </p> -->
-
-                
                 <h4 style="display: inline;"><span style="color: var(--primary-color); font-weight: bold;">Data Scientist</span></h4>
-                <span style="display: inline;"> &bull; <span style="font-weight: bold;">Omnium</span> <i>(Sept. 2025 – Mar. 2025)</i></span>
+                <span style="display: inline;"> &bull; <span style="font-weight: bold;">Aven</span> <i>(June 2026 – Present)</i></span>
+                <p style="margin-top: 5px;">
+                    I currently work as a Data Scientist at Aven, where I use data science to help lower the cost of capital and improve lending decisions. My work spans large-scale behavioral and financial data, statistical analysis, experimentation, and predictive modeling, with a focus on turning complex patterns in applicant and account data into measurable improvements in credit outcomes and business performance.
+                </p>
+
+                <h4 style="display: inline;"><span style="color: var(--primary-color); font-weight: bold;">Data Scientist</span></h4>
+                <span style="display: inline;"> &bull; <span style="font-weight: bold;">Omnium</span> <i>(Sept. 2025 – Mar. 2026)</i></span>
                 <p style="margin-top: 5px;">
                     Continuing part-time with Omnium after my internship, I focused on developing and validating statistical methods, modeling frameworks, and scalable analytical processes to support 
                     pricing strategy and demand insight. Much of my work involved evaluating approaches—such as 
@@ -280,9 +278,9 @@
                 The question I proposed was: <em>"How can we replace fixed quad-period seasonality with data-driven seasonal clusters to reduce pricing regression 
                   complexity and capture true demand variation."</em>
                 To answer this, I implemented two hierarchical agglomerative clustering pipelines - one that clustered weeks just based off of their average dollar velocities,
-                  and one that also included distance between weeks in a custom distance metric in order to prioritize continuous clusters.
+                and one that also included distance between weeks in a custom distance metric in order to prioritize continuous clusters.
                 I evaluated these models across seven linkage criteria (focusing on single linkage), using dendrograms, silhouette scores, Calinski–Harabasz indices, 
-                  and Davies–Bouldin indices to quantify results. 
+                and Davies–Bouldin indices to quantify results. 
                 Ultimately, I applied these clustered season definitions to pricing regressions, resulting in reduced multicollinearity compared to standard 13-period models 
                 and improved demand predictions. 
 <!--                 View the <a href="Seasonality Clustering - Intern Project.pdf" 
@@ -483,7 +481,7 @@
                         clearInterval(typingInterval);
                         isTyping
                         isTyping = false;
-                        setTimeout(deleteWord, 1000); // hold for 1 second
+                        setTimeout(deleteWord, 1000);
                     }
                 }, typingSpeed);
             }
